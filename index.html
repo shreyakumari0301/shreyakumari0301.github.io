@@ -11,21 +11,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="cursor-layer" aria-hidden="true">
-      <div class="cursor-bubble" id="cursorBubble"></div>
-      <div class="cursor-ring" id="cursorRing"></div>
-      <canvas id="bubbleTrail"></canvas>
-    </div>
-    <div class="page-glow" aria-hidden="true"></div>
-
-    <header class="nav">
-      <a class="nav-brand" href="#top">SK</a>
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true"></span>
+        shreya.kumari
+      </a>
       <nav class="nav-links">
         <a href="#about">About</a>
         <a href="#focus">Focus</a>
@@ -36,84 +32,63 @@
       </nav>
     </header>
 
-    <main id="top">
-      <section class="hero">
-        <p class="hero-role">Research Engineer · MedOS Tech · Abu Dhabi</p>
-        <h1>Shreya Kumari</h1>
-        <p class="lede">
-          I build reliable, application-driven AI for science and medicine —
-          LLM systems, agentic workflows, and simulation-driven world models,
-          with a bias toward things that can be evaluated and shipped.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#experience">See my work</a>
-          <div class="social-row hero-socials" aria-label="Profiles">
-            <a
-              class="social-btn"
-              href="https://github.com/shreyakumari0301"
-              target="_blank"
-              rel="noopener"
-              aria-label="GitHub"
-              title="GitHub"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2c-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17.8 3.6 18.8 4 18.8 4c.6 1.6.2 2.9.1 3.2a4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
-                />
-              </svg>
-            </a>
-            <a
-              class="social-btn"
-              href="https://www.linkedin.com/in/shreyakumari0301"
-              target="_blank"
-              rel="noopener"
-              aria-label="LinkedIn"
-              title="LinkedIn"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zm7.5 0h3.84v1.98h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.62c0-1.58-.03-3.61-2.2-3.61-2.2 0-2.54 1.72-2.54 3.5V23h-4V8.5z"
-                />
-              </svg>
-            </a>
-            <a
-              class="social-btn"
-              href="https://openreview.net/profile?id=~Shreya_Kumari1"
-              target="_blank"
-              rel="noopener"
-              aria-label="OpenReview"
-              title="OpenReview"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 2.2 3.5 7v10L12 21.8 20.5 17V7L12 2.2Zm0 2.3 6.2 3.5v.2l-6.2 3.5-6.2-3.5v-.2L12 4.5Zm-6.8 5.4 5.9 3.3v6.4l-5.9-3.3V9.9Zm7.7 9.7v-6.4l5.9-3.3v6.4l-5.9 3.3Z"
-                />
-              </svg>
-            </a>
-            <a
-              class="social-btn"
-              href="https://orcid.org/0009-0007-4692-5024"
-              target="_blank"
-              rel="noopener"
-              aria-label="ORCID"
-              title="ORCID"
-            >
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-3.1 4.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM8.1 9.8h1.7v7.9H8.1V9.8zm3.2 0h3.55c2.35 0 3.85 1.4 3.85 3.95S17.2 17.7 14.85 17.7H11.3V9.8zm1.7 1.55v4.8h1.8c1.4 0 2.2-.8 2.2-2.4s-.8-2.4-2.2-2.4h-1.8z"
-                />
-              </svg>
-            </a>
+    <main id="top" class="shell">
+      <section class="window">
+        <div class="window-bar">
+          <span class="window-icon" aria-hidden="true"></span>
+          <span class="window-title">welcome.txt</span>
+        </div>
+        <div class="window-body welcome">
+          <div class="avatar" aria-hidden="true">SK</div>
+          <div class="welcome-copy">
+            <p class="role">Research Engineer · MedOS Tech · Abu Dhabi</p>
+            <h1>Shreya Kumari<span class="cursor" aria-hidden="true"></span></h1>
+            <p class="lede">
+              I build reliable, application-driven AI for science and medicine —
+              LLM systems, agentic workflows, and simulation-driven world models,
+              with a bias toward things that can be evaluated and shipped.
+            </p>
+            <div class="btn-row">
+              <a class="btn btn-work" href="#experience">See my work</a>
+              <a
+                class="btn"
+                href="https://github.com/shreyakumari0301"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/shreyakumari0301"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                class="btn"
+                href="https://openreview.net/profile?id=~Shreya_Kumari1"
+                target="_blank"
+                rel="noopener"
+                >OpenReview</a
+              >
+              <a
+                class="btn"
+                href="https://orcid.org/0009-0007-4692-5024"
+                target="_blank"
+                rel="noopener"
+                >ORCID</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="about">
-        <div class="section-head">
-          <p class="eyebrow">About</p>
-          <h2>Research meets systems.</h2>
+      <section class="window" id="about">
+        <div class="window-bar">
+          <span class="window-icon" aria-hidden="true"></span>
+          <span class="window-title">about</span>
         </div>
-        <div class="prose">
+        <div class="window-body prose">
           <p>
             I am a Research Engineer at
             <a href="https://medos.tech/" target="_blank" rel="noopener"
@@ -134,180 +109,178 @@
           </p>
           <p>
             I care about models that are useful outside the notebook: clear
-            evaluation, reliable orchestration, and systems you can actually
-            put next to real workflows.
+            evaluation, reliable orchestration, and systems you can actually put
+            next to real workflows.
           </p>
         </div>
       </section>
 
-      <section class="section" id="focus">
-        <div class="section-head">
-          <p class="eyebrow">Focus</p>
-          <h2>What I work on.</h2>
+      <section class="window" id="focus">
+        <div class="window-bar">
+          <span class="window-icon" aria-hidden="true"></span>
+          <span class="window-title">focus</span>
         </div>
-        <div class="focus-grid">
-          <article class="focus-card">
-            <h3>LLMs</h3>
-            <p>
-              Language-model systems for research and clinical tooling —
-              retrieval, generation, and evaluation loops that stay grounded in
-              the task.
-            </p>
-          </article>
-          <article class="focus-card">
-            <h3>Agentic AI</h3>
-            <p>
-              Agents that plan, call tools, and operate inside constrained
-              workflows — with measurable steps rather than open-ended demos.
-            </p>
-          </article>
-          <article class="focus-card">
-            <h3>World Models</h3>
-            <p>
-              Simulation-driven and predictive models that capture dynamics —
-              useful for scientific AI and decision support under uncertainty.
-            </p>
-          </article>
-        </div>
-
-        <div class="now-next">
-          <div>
-            <h3>Working on now</h3>
-            <ul>
-              <li>
-                Research engineering at MedOS Tech on clinical AI and medical
-                research tooling.
-              </li>
-              <li>
-                LLM and agent pipelines that meet clinicians and researchers
-                inside real workflows.
-              </li>
-              <li>
-                Evaluation and reliability for systems that need to be trusted
-                around people and data.
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h3>Where I am heading</h3>
-            <ul>
-              <li>
-                Stronger scientific AI: models that reason, simulate, and
-                support discovery.
-              </li>
-              <li>
-                Agentic systems that are auditable in high-stakes domains.
-              </li>
-              <li>
-                Publishing the research and shipping the engineering behind it.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="experience">
-        <div class="section-head">
-          <p class="eyebrow">Experience</p>
-          <h2>Work timeline.</h2>
-        </div>
-
-        <div class="work-timeline">
-          <article class="work-entry">
-            <div class="work-when">
-              <span>Jul 2026 – Present</span>
-              <span class="badge">current</span>
-            </div>
-            <div class="work-body">
-              <h3>Research Engineer</h3>
-              <p class="work-org">
-                <a href="https://medos.tech/" target="_blank" rel="noopener"
-                  >MedOS Tech</a
-                >
-                · Abu Dhabi, UAE
+        <div class="window-body">
+          <div class="focus-grid">
+            <article class="focus-card">
+              <h3>LLMs</h3>
+              <p>
+                Language-model systems for research and clinical tooling —
+                retrieval, generation, and evaluation loops grounded in the
+                task.
               </p>
-              <ul>
-                <li>
-                  Building AI for clinical decision support, medical research,
-                  and workflow automation.
-                </li>
-                <li>
-                  Working across LLM systems, research tooling, and production
-                  pipelines that sit next to clinical reality.
-                </li>
-              </ul>
-            </div>
-          </article>
+            </article>
+            <article class="focus-card">
+              <h3>Agentic AI</h3>
+              <p>
+                Agents that plan, call tools, and operate inside constrained
+                workflows — with measurable steps rather than open-ended demos.
+              </p>
+            </article>
+            <article class="focus-card">
+              <h3>World Models</h3>
+              <p>
+                Simulation-driven and predictive models that capture dynamics —
+                useful for scientific AI and decision support under uncertainty.
+              </p>
+            </article>
+          </div>
 
-          <article class="work-entry">
-            <div class="work-when">
-              <span>Jan 2026 – Jul 2026</span>
-            </div>
-            <div class="work-body">
-              <h3>ML Intern</h3>
-              <p class="work-org">Materials Informatics Lab, IIT Madras</p>
+          <div class="now-next">
+            <div>
+              <h3>Working on now</h3>
               <ul>
                 <li>
-                  Optimization-driven ML and predictive modeling for materials
-                  science.
+                  Research engineering at MedOS Tech on clinical AI and medical
+                  research tooling.
                 </li>
                 <li>
-                  Bridging data-driven models with experiment-guided design of
-                  advanced materials.
+                  LLM and agent pipelines that meet clinicians and researchers
+                  inside real workflows.
+                </li>
+                <li>
+                  Evaluation and reliability for systems that need to be trusted
+                  around people and data.
                 </li>
               </ul>
             </div>
-          </article>
-
-          <article class="work-entry">
-            <div class="work-when">
-              <span>Jul 2025 – Dec 2025</span>
-            </div>
-            <div class="work-body">
-              <h3>Research Intern</h3>
-              <p class="work-org">DoMS, IIT Madras · Chennai, India</p>
+            <div>
+              <h3>Where I am heading</h3>
               <ul>
                 <li>
-                  Research on structured reasoning and applied machine learning
-                  systems.
+                  Stronger scientific AI: models that reason, simulate, and
+                  support discovery.
                 </li>
                 <li>
-                  Combined academic research practice with end-to-end system
-                  building.
+                  Agentic systems that are auditable in high-stakes domains.
+                </li>
+                <li>
+                  Publishing the research and shipping the engineering behind
+                  it.
                 </li>
               </ul>
             </div>
-          </article>
-
-          <article class="work-entry">
-            <div class="work-when">
-              <span>2023 – 2027</span>
-            </div>
-            <div class="work-body">
-              <h3>B.S. Data Science & Applications</h3>
-              <p class="work-org">Indian Institute of Technology Madras</p>
-              <ul>
-                <li>
-                  Foundations in statistics, computing, and machine learning.
-                </li>
-                <li>
-                  Applied across research internships and practical AI systems.
-                </li>
-              </ul>
-            </div>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="skills">
-        <div class="section-head">
-          <p class="eyebrow">Skills</p>
-          <h2>Tools I reach for.</h2>
+      <section class="window" id="experience">
+        <div class="window-bar">
+          <span class="window-icon" aria-hidden="true"></span>
+          <span class="window-title">experience</span>
         </div>
-        <div class="skills-grid">
+        <div class="window-body">
+          <div class="timeline">
+            <article class="entry">
+              <div class="when">
+                <span>Jul 2026 – Present</span>
+                <span class="badge">current</span>
+              </div>
+              <div class="what">
+                <h3>Research Engineer</h3>
+                <p class="org">
+                  <a href="https://medos.tech/" target="_blank" rel="noopener"
+                    >MedOS Tech</a
+                  >
+                  · Abu Dhabi, UAE
+                </p>
+                <ul>
+                  <li>
+                    Building AI for clinical decision support, medical research,
+                    and workflow automation.
+                  </li>
+                  <li>
+                    Working across LLM systems, research tooling, and production
+                    pipelines next to clinical reality.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry">
+              <div class="when"><span>Jan 2026 – Jul 2026</span></div>
+              <div class="what">
+                <h3>ML Intern</h3>
+                <p class="org">Materials Informatics Lab, IIT Madras</p>
+                <ul>
+                  <li>
+                    Optimization-driven ML and predictive modeling for materials
+                    science.
+                  </li>
+                  <li>
+                    Bridging data-driven models with experiment-guided design.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry">
+              <div class="when"><span>Jul 2025 – Dec 2025</span></div>
+              <div class="what">
+                <h3>Research Intern</h3>
+                <p class="org">DoMS, IIT Madras · Chennai, India</p>
+                <ul>
+                  <li>
+                    Research on structured reasoning and applied machine
+                    learning systems.
+                  </li>
+                  <li>
+                    Combined academic research practice with end-to-end system
+                    building.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="entry">
+              <div class="when"><span>2023 – 2027</span></div>
+              <div class="what">
+                <h3>B.S. Data Science & Applications</h3>
+                <p class="org">Indian Institute of Technology Madras</p>
+                <ul>
+                  <li>
+                    Foundations in statistics, computing, and machine learning.
+                  </li>
+                  <li>
+                    Applied across research internships and practical AI
+                    systems.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="window" id="skills">
+        <div class="window-bar">
+          <span class="window-icon" aria-hidden="true"></span>
+          <span class="window-title">skills</span>
+        </div>
+        <div class="window-body skills">
           <div>
             <h3>AI & research</h3>
-            <div class="tag-row">
+            <div class="tags">
               <span>LLMs</span>
               <span>Agentic AI</span>
               <span>World Models</span>
@@ -318,7 +291,7 @@
           </div>
           <div>
             <h3>Engineering</h3>
-            <div class="tag-row">
+            <div class="tags">
               <span>Python</span>
               <span>PyTorch</span>
               <span>FastAPI</span>
@@ -330,212 +303,143 @@
         </div>
       </section>
 
-      <section class="section" id="publications">
-        <div class="section-head">
-          <p class="eyebrow">Publications</p>
-          <h2>Selected papers.</h2>
+      <section class="window" id="publications">
+        <div class="window-bar">
+          <span class="window-icon" aria-hidden="true"></span>
+          <span class="window-title">publications</span>
         </div>
-        <ol class="pub-list">
-          <li class="pub-item">
-            <span class="pub-year">2026</span>
-            <div class="pub-body">
+        <div class="window-body">
+          <ol class="pubs">
+            <li>
               <h3>
                 An Operations Layer for LLM-Maintained Personal Knowledge Bases
               </h3>
-              <p class="pub-authors">
+              <p class="authors">
                 <strong>Shreya Kumari</strong>, Habib Baluwala, Bandar
                 AlShammari
               </p>
-              <p class="pub-venue">
+              <p class="venue">
                 ACL ARR 2026 October Submission · 13 Oct 2026
               </p>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-year">2026</span>
-            <div class="pub-body">
+            </li>
+            <li>
               <h3>
                 SecondRead: Rereading Visual Evidence for Cheap Multi-Task
                 Medical Vision-Language Generation
               </h3>
-              <p class="pub-authors">
-                Ashish Mehta, <strong>Shreya Kumari</strong>, Abhijit Das,
-                Imran Razzak
+              <p class="authors">
+                Ashish Mehta, <strong>Shreya Kumari</strong>, Abhijit Das, Imran
+                Razzak
               </p>
-              <p class="pub-venue">
+              <p class="venue">
                 ACL ARR 2026 October Submission · 11 Oct 2026
               </p>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-year">2026</span>
-            <div class="pub-body">
+            </li>
+            <li>
               <h3>
                 GEM: Graph-Based Evolutionary Metacognition for Self-Improving
                 Language Agents
               </h3>
-              <p class="pub-authors">
+              <p class="authors">
                 Abhijit Das, Ashish Mehta, Debasmita Biswas,
                 <strong>Shreya Kumari</strong>, Nichula Sathmith Wasalathilaka,
                 Behzad Bozorgtabar, Dwarikanath Mahapatra, Imran Razzak
               </p>
-              <p class="pub-venue">
+              <p class="venue">
                 AAMAS 2027 Conference Submission · 02 Oct 2026
               </p>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-year">2026</span>
-            <div class="pub-body">
+            </li>
+            <li>
               <h3>ViTA: Visual Tool Synthesis for Self-Evolving Agents</h3>
-              <p class="pub-authors">
+              <p class="authors">
                 Abhijit Das, Debasmita Biswas,
                 <strong>Shreya Kumari</strong>, Nichula Sathmith Wasalathilaka,
                 Dwarikanath Mahapatra, Imran Razzak
               </p>
-              <p class="pub-venue">
-                Submitted to NeurIPS 2026 · 01 May 2026
-              </p>
-            </div>
-          </li>
-          <li class="pub-item">
-            <span class="pub-year">2026</span>
-            <div class="pub-body">
+              <p class="venue">Submitted to NeurIPS 2026 · 01 May 2026</p>
+            </li>
+            <li>
               <h3>
                 Route Before You Retrieve: Contract-Bound,
                 Cognitive-Task-Aware Retrieval-Augmented Generation for Cyber
                 Threat Intelligence
               </h3>
-              <p class="pub-authors">
+              <p class="authors">
                 Muna Al-Hawawreh; <strong>Shreya Kumari</strong>; Muhammad
                 Hammad; Ashish Mehta; Hirusha Adikari; Habib Baluwala; Bandar
                 Alshammari
               </p>
-              <p class="pub-venue">
+              <p class="venue">
                 Engineering Applications of Artificial Intelligence · Manuscript
                 EAAI-26-33481
               </p>
-            </div>
-          </li>
-        </ol>
-        <p class="pub-note">
-          Papers and reviewing activity are also on
-          <a
-            href="https://openreview.net/profile?id=~Shreya_Kumari1"
-            target="_blank"
-            rel="noopener"
-            >OpenReview</a
-          >
-          and
-          <a
-            href="https://orcid.org/0009-0007-4692-5024"
-            target="_blank"
-            rel="noopener"
-            >ORCID</a
-          >.
-        </p>
+            </li>
+          </ol>
+        </div>
       </section>
 
-      <section class="section connect" id="contact">
-        <div class="section-head">
-          <p class="eyebrow">Contact</p>
-          <h2>Let’s talk.</h2>
-          <p class="connect-lede">
+      <section class="window" id="contact">
+        <div class="window-bar">
+          <span class="window-icon" aria-hidden="true"></span>
+          <span class="window-title">contact</span>
+        </div>
+        <div class="window-body">
+          <p class="lede contact-lede">
             Open to research collaborations and conversations about medical AI,
             LLMs, agentic systems, and world models.
           </p>
-        </div>
-        <div class="social-row" aria-label="Contact links">
-          <a
-            class="social-btn"
-            href="mailto:shreyasri0301@gmail.com"
-            aria-label="Email"
-            title="Email"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M3 6.75A2.75 2.75 0 0 1 5.75 4h12.5A2.75 2.75 0 0 1 21 6.75v10.5A2.75 2.75 0 0 1 18.25 20H5.75A2.75 2.75 0 0 1 3 17.25V6.75Zm2.1.5 6.4 4.48a.9.9 0 0 0 1 0L18.9 7.25H5.1Zm13.15 1.6-5.94 4.16a2.4 2.4 0 0 1-2.62 0L3.75 8.85v8.4c0 .69.56 1.25 1.25 1.25h12.5c.69 0 1.25-.56 1.25-1.25v-8.4Z"
-              />
-            </svg>
-          </a>
-          <a
-            class="social-btn"
-            href="https://github.com/shreyakumari0301"
-            target="_blank"
-            rel="noopener"
-            aria-label="GitHub"
-            title="GitHub"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.2 1.7 1.2 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.7-.3-5.5-1.3-5.5-6a4.7 4.7 0 0 1 1.2-3.2c-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.3 11.3 0 0 1 6 0C17.8 3.6 18.8 4 18.8 4c.6 1.6.2 2.9.1 3.2a4.7 4.7 0 0 1 1.2 3.2c0 4.7-2.8 5.7-5.5 6 .4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
-              />
-            </svg>
-          </a>
-          <a
-            class="social-btn"
-            href="https://www.linkedin.com/in/shreyakumari0301"
-            target="_blank"
-            rel="noopener"
-            aria-label="LinkedIn"
-            title="LinkedIn"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8.5h4V23h-4V8.5zm7.5 0h3.84v1.98h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V23h-4v-6.62c0-1.58-.03-3.61-2.2-3.61-2.2 0-2.54 1.72-2.54 3.5V23h-4V8.5z"
-              />
-            </svg>
-          </a>
-          <a
-            class="social-btn"
-            href="https://openreview.net/profile?id=~Shreya_Kumari1"
-            target="_blank"
-            rel="noopener"
-            aria-label="OpenReview"
-            title="OpenReview"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 2.2 3.5 7v10L12 21.8 20.5 17V7L12 2.2Zm0 2.3 6.2 3.5v.2l-6.2 3.5-6.2-3.5v-.2L12 4.5Zm-6.8 5.4 5.9 3.3v6.4l-5.9-3.3V9.9Zm7.7 9.7v-6.4l5.9-3.3v6.4l-5.9 3.3Z"
-              />
-            </svg>
-          </a>
-          <a
-            class="social-btn"
-            href="https://orcid.org/0009-0007-4692-5024"
-            target="_blank"
-            rel="noopener"
-            aria-label="ORCID"
-            title="ORCID"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-3.1 4.35a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3zM8.1 9.8h1.7v7.9H8.1V9.8zm3.2 0h3.55c2.35 0 3.85 1.4 3.85 3.95S17.2 17.7 14.85 17.7H11.3V9.8zm1.7 1.55v4.8h1.8c1.4 0 2.2-.8 2.2-2.4s-.8-2.4-2.2-2.4h-1.8z"
-              />
-            </svg>
-          </a>
-          <a
-            class="social-btn"
-            href="https://medos.tech/"
-            target="_blank"
-            rel="noopener"
-            aria-label="MedOS Tech"
-            title="MedOS Tech"
-          >
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M12 2.5c-5.2 0-9.5 4.3-9.5 9.5S6.8 21.5 12 21.5s9.5-4.3 9.5-9.5S17.2 2.5 12 2.5Zm0 2.2c1.4 0 2.7.4 3.8 1.1L5.8 15.8A7.2 7.2 0 0 1 12 4.7Zm0 14.6a7.2 7.2 0 0 1-3.8-1.1l10-10a7.2 7.2 0 0 1-6.2 11.1Z"
-              />
-            </svg>
-          </a>
+          <div class="btn-row">
+            <a class="btn btn-work" href="mailto:shreyasri0301@gmail.com"
+              >Email</a
+            >
+            <a
+              class="btn"
+              href="https://github.com/shreyakumari0301"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+            <a
+              class="btn"
+              href="https://www.linkedin.com/in/shreyakumari0301"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+            <a
+              class="btn"
+              href="https://openreview.net/profile?id=~Shreya_Kumari1"
+              target="_blank"
+              rel="noopener"
+              >OpenReview</a
+            >
+            <a
+              class="btn"
+              href="https://orcid.org/0009-0007-4692-5024"
+              target="_blank"
+              rel="noopener"
+              >ORCID</a
+            >
+            <a
+              class="btn"
+              href="https://medos.tech/"
+              target="_blank"
+              rel="noopener"
+              >MedOS Tech</a
+            >
+          </div>
         </div>
       </section>
+
+      <footer class="footer">
+        © <span id="year"></span> Shreya Kumari · hand-built, no framework
+      </footer>
     </main>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Shreya Kumari · Built in India</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = String(
+        new Date().getFullYear()
+      );
+    </script>
   </body>
 </html>
