@@ -96,7 +96,7 @@
         continue;
       }
       ctx.beginPath();
-      ctx.fillStyle = `rgba(31, 111, 120, ${0.32 * p.life})`;
+      ctx.fillStyle = `rgba(47, 91, 255, ${0.34 * p.life})`;
       ctx.arc(p.x, p.y, p.r * p.life, 0, Math.PI * 2);
       ctx.fill();
       ctx.beginPath();
