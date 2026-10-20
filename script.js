@@ -72,7 +72,9 @@
   function updateHoverTarget(event) {
     const target = event.target;
     const interactive =
-      target.closest("a, button, .pub-item, .timeline-item, .social-btn, .btn");
+      target.closest(
+        "a, button, .pub-item, .work-body, .focus-card, .social-btn, .btn"
+      );
     bubble.classList.toggle("is-hover", Boolean(interactive));
   }
 
