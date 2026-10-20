@@ -1,6 +1,27 @@
 (() => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const isCoarse = window.matchMedia("(pointer: coarse)").matches;
+
+  const reveals = document.querySelectorAll(".reveal");
+  if (reduceMotion) {
+    reveals.forEach((el) => el.classList.add("is-in"));
+  } else if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    reveals.forEach((el) => io.observe(el));
+  } else {
+    reveals.forEach((el) => el.classList.add("is-in"));
+  }
+
   if (reduceMotion || isCoarse) return;
 
   const bubble = document.getElementById("cursorBubble");

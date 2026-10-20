@@ -34,6 +34,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#focus">Focus</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -44,7 +45,7 @@
 
 <main class="wrap">
 
-  <section class="win hero" aria-labelledby="top-title">
+  <section class="win hero reveal" aria-labelledby="top-title">
     <div class="titlebar"><span class="box"></span><h2 id="top-title">Profile</h2></div>
     <div class="body">
       <figure class="avatar">
@@ -53,9 +54,14 @@
       <div>
         <div class="eyebrow">Research Engineer · MedOS Tech · Abu Dhabi</div>
         <h1>Shreya Kumari</h1>
-        <p class="lead">I build reliable, application-driven AI for science and medicine — LLM systems, agentic workflows, and simulation-driven world models, with a bias toward things that can be evaluated and shipped.</p>
+        <p class="lead">At MedOS Tech I build clinical AI you can evaluate — decision-support tooling, research pipelines, and world-model systems that sit next to real care workflows.</p>
+        <ul class="proofs" aria-label="Highlights">
+          <li>Research Engineer · MedOS Tech</li>
+          <li>IIT Madras · Data Science</li>
+          <li>5 papers in submission</li>
+        </ul>
         <div class="btns">
-          <a class="btn primary" href="#experience">See my work</a>
+          <a class="btn primary" href="#projects">See my work</a>
           <a class="btn" href="https://github.com/shreyakumari0301" rel="noopener">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/shreyakumari0301" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://openreview.net/profile?id=~Shreya_Kumari1" rel="noopener">OpenReview</a>
@@ -65,7 +71,7 @@
     </div>
   </section>
 
-  <section class="win" id="about" aria-labelledby="about-title">
+  <section class="win reveal" id="about" aria-labelledby="about-title">
     <div class="titlebar"><span class="box"></span><h2 id="about-title">About</h2></div>
     <div class="body">
       <p>I am a Research Engineer at <a href="https://medos.tech/" rel="noopener">MedOS Tech</a> in Abu Dhabi, working on AI for clinical decision support, medical research, and workflow automation. My work sits at the intersection of machine learning research and practical system building — especially <strong>LLMs</strong>, <strong>agentic AI</strong>, and <strong>world models</strong> for scientific and medical settings.</p>
@@ -80,7 +86,7 @@
     </div>
   </section>
 
-  <section class="win blue" id="focus" aria-labelledby="focus-title">
+  <section class="win blue reveal" id="focus" aria-labelledby="focus-title">
     <div class="titlebar"><span class="box"></span><h2 id="focus-title">Focus</h2></div>
     <div class="body">
       <div class="cols">
@@ -107,7 +113,7 @@
     </div>
   </section>
 
-  <section class="win sand" id="experience" aria-labelledby="exp-title">
+  <section class="win sand reveal" id="experience" aria-labelledby="exp-title">
     <div class="titlebar"><span class="box"></span><h2 id="exp-title">Experience</h2></div>
     <div class="body">
       <ol class="timeline">
@@ -118,6 +124,15 @@
           <ul>
             <li>Building AI for clinical decision support, medical research, and workflow automation.</li>
             <li>Working across LLM systems, research tooling, and production pipelines next to clinical reality.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="when">2026 &ndash; Present</div>
+          <h3>Research Collaborator</h3>
+          <div class="org">AI4Opt Group · Singapore Management University (SMU) · with Prof. Zhiguang Cao</div>
+          <ul>
+            <li>Research collaboration on AI for optimization, including LLM- and world-model approaches for decision-making systems.</li>
+            <li>Contributing to applied research spanning structured reasoning, agents, and evaluation for complex workflows.</li>
           </ul>
         </li>
         <li>
@@ -142,7 +157,51 @@
     </div>
   </section>
 
-  <section class="win" id="publications" aria-labelledby="pub-title">
+  <section class="win reveal" id="projects" aria-labelledby="proj-title">
+    <div class="titlebar"><span class="box"></span><h2 id="proj-title">Projects</h2></div>
+    <div class="body">
+      <div class="cards">
+        <article class="card">
+          <h3>Clinical World Models</h3>
+          <p>World-model systems for clinical decision support at MedOS Tech — simulating patient/state dynamics to support prediction, planning, and evaluable bedside tooling.</p>
+          <ul class="tags small">
+            <li>World Models</li>
+            <li>Clinical AI</li>
+            <li>MedOS Tech</li>
+          </ul>
+        </article>
+        <a class="card" href="https://github.com/shreyakumari0301/Event-Driven-Backtesting-Engine" rel="noopener">
+          <h3>Event-Driven Backtesting Engine</h3>
+          <p>Modular engine for simulating trading strategies with event-driven architecture and reproducible evaluation loops.</p>
+          <ul class="tags small">
+            <li>Python</li>
+            <li>Simulation</li>
+            <li>Systems</li>
+          </ul>
+        </a>
+        <a class="card" href="https://github.com/shreyakumari0301/Brain-Tumor-Detection" rel="noopener">
+          <h3>Brain Tumor Detection</h3>
+          <p>Deep learning pipeline for medical imaging — detecting and classifying brain tumors from scan data.</p>
+          <ul class="tags small">
+            <li>Medical AI</li>
+            <li>Deep Learning</li>
+            <li>CV</li>
+          </ul>
+        </a>
+        <a class="card" href="https://github.com/shreyakumari0301/AI-Chatbot-using-FastAPI" rel="noopener">
+          <h3>AI Chatbot · FastAPI</h3>
+          <p>Production-minded conversational agent with a FastAPI backend — clean APIs for LLM-powered interaction.</p>
+          <ul class="tags small">
+            <li>LLMs</li>
+            <li>FastAPI</li>
+            <li>Agents</li>
+          </ul>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="win reveal" id="publications" aria-labelledby="pub-title">
     <div class="titlebar"><span class="box"></span><h2 id="pub-title">Publications</h2></div>
     <div class="body">
       <div class="cards">
@@ -190,7 +249,7 @@
     </div>
   </section>
 
-  <section class="win blue" id="skills" aria-labelledby="skills-title">
+  <section class="win blue reveal" id="skills" aria-labelledby="skills-title">
     <div class="titlebar"><span class="box"></span><h2 id="skills-title">Skills</h2></div>
     <div class="body">
       <div class="cols">
@@ -221,7 +280,7 @@
     </div>
   </section>
 
-  <section class="win sand" id="education" aria-labelledby="edu-title">
+  <section class="win sand reveal" id="education" aria-labelledby="edu-title">
     <div class="titlebar"><span class="box"></span><h2 id="edu-title">Education</h2></div>
     <div class="body">
       <div class="cols">
@@ -237,7 +296,7 @@
     </div>
   </section>
 
-  <section class="win" id="contact" aria-labelledby="contact-title">
+  <section class="win reveal" id="contact" aria-labelledby="contact-title">
     <div class="titlebar"><span class="box"></span><h2 id="contact-title">Contact</h2></div>
     <div class="body">
       <p>Open to research collaborations and conversations about medical AI, LLMs, agentic systems, and world models.</p>
