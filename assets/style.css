@@ -210,22 +210,20 @@ main {
 .avatar {
   width: 132px;
   height: 132px;
+  margin: 0;
   border-radius: 20px;
   border: 1px solid var(--line);
   overflow: hidden;
   box-shadow: var(--shadow);
+  flex-shrink: 0;
 }
 
-.avatar-fallback {
+.avatar img {
   width: 100%;
   height: 100%;
-  display: grid;
-  place-items: center;
-  font-family: var(--mono);
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
-  background: linear-gradient(145deg, #2f5bff, #1a1f2b 70%);
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .eyebrow {
