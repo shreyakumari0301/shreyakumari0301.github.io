@@ -208,8 +208,8 @@ main {
 }
 
 .avatar {
-  width: 132px;
-  height: 132px;
+  width: 200px;
+  height: 200px;
   margin: 0;
   border-radius: 20px;
   border: 1px solid var(--line);
@@ -629,7 +629,7 @@ footer {
   .cursor-layer,
   .page-glow { display: none; }
   .hero .body { grid-template-columns: 1fr; }
-  .avatar { width: 96px; height: 96px; }
+  .avatar { width: 140px; height: 140px; }
   .cols, .cards { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   dl.contact { grid-template-columns: 1fr; gap: 0.15rem; }
