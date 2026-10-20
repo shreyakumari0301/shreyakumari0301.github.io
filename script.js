@@ -106,7 +106,7 @@
       ctx.save();
       ctx.translate(p.x, p.y);
       ctx.rotate(Math.PI / 4);
-      ctx.fillStyle = `rgba(34, 184, 207, ${0.32 * p.life})`;
+      ctx.fillStyle = `rgba(10, 10, 10, ${0.28 * p.life})`;
       ctx.fillRect(-size / 2, -size / 2, size, size);
       ctx.fillStyle = `rgba(255, 255, 255, ${0.4 * p.life})`;
       ctx.fillRect(-size / 5, -size / 5, size / 2.5, size / 2.5);
