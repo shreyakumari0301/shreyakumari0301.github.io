@@ -26,7 +26,7 @@ body {
   color: var(--ink);
   background: var(--bg);
   line-height: 1.65;
-  font-size: 16px;
+  font-size: 18px;
   cursor: none;
   overflow-x: hidden;
 }
@@ -238,7 +238,7 @@ main {
 }
 
 h1 {
-  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-size: clamp(2.2rem, 5vw, 3rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -249,9 +249,15 @@ h1 {
 .cursor { display: none; }
 
 .lead {
-  font-size: 1.05rem;
-  max-width: 40rem;
+  font-size: 1.12rem;
+  max-width: 42rem;
   color: var(--muted);
+}
+
+.timeline ul strong,
+.panel ul strong {
+  color: var(--ink);
+  font-weight: 700;
 }
 
 .proofs {
@@ -389,7 +395,7 @@ h1 {
 }
 
 .panel ul { margin-left: 1.05rem; }
-.panel li { margin-bottom: 0.45rem; font-size: 0.95rem; }
+.panel li { margin-bottom: 0.45rem; font-size: 1.02rem; }
 
 .timeline {
   list-style: none;
@@ -426,18 +432,19 @@ h1 {
 }
 
 .timeline h3 {
-  font-size: 1.08rem;
+  font-size: 1.18rem;
   margin-top: 0.15rem;
 }
 
 .org {
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .timeline ul {
   margin: 0.55rem 0 0 1.05rem;
   color: var(--muted);
+  font-size: 1.02rem;
 }
 
 .timeline ul li { margin-bottom: 0.3rem; }
@@ -494,7 +501,7 @@ a.card:hover {
 }
 
 .card h3 {
-  font-size: 0.98rem;
+  font-size: 1.05rem;
   margin-bottom: 0.4rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -503,7 +510,7 @@ a.card:hover {
 }
 
 .card p {
-  font-size: 0.9rem;
+  font-size: 0.98rem;
   color: var(--muted);
 }
 
