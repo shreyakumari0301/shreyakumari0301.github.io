@@ -72,7 +72,7 @@
   function updateHoverTarget(event) {
     const target = event.target;
     const interactive =
-      target.closest("a, button, .project, .timeline-item, .link-card, .btn");
+      target.closest("a, button, .pub-item, .timeline-item, .social-btn, .btn");
     bubble.classList.toggle("is-hover", Boolean(interactive));
   }
 
@@ -101,7 +101,7 @@
         continue;
       }
       ctx.beginPath();
-      ctx.fillStyle = `rgba(20, 184, 166, ${0.35 * p.life})`;
+      ctx.fillStyle = `rgba(34, 184, 207, ${0.35 * p.life})`;
       ctx.arc(p.x, p.y, p.r * p.life, 0, Math.PI * 2);
       ctx.fill();
       ctx.beginPath();
