@@ -29,6 +29,7 @@ body {
     var(--bg);
   line-height: 1.65;
   font-size: 16px;
+  cursor: none;
 }
 
 a { color: var(--accent); text-decoration: none; }
@@ -245,9 +246,10 @@ h1 {
 .stat b {
   display: block;
   font-family: var(--mono);
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: var(--accent);
   margin-bottom: 0.2rem;
+  line-height: 1.25;
 }
 
 .stat span {
@@ -432,7 +434,78 @@ footer {
   color: var(--muted);
 }
 
+/* cursor bubble */
+.page-glow {
+  position: fixed;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 111, 120, 0.14), transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+}
+
+.cursor-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.cursor-bubble {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, #4aa3ab 45%, #1f6f78 100%);
+  box-shadow:
+    0 0 16px rgba(31, 111, 120, 0.45),
+    0 0 32px rgba(31, 111, 120, 0.2);
+  opacity: 0;
+  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, opacity 0.2s ease;
+  will-change: transform;
+}
+
+.cursor-bubble.is-active { opacity: 1; }
+
+.cursor-bubble.is-hover {
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  background: radial-gradient(circle at 30% 30%, #fff 0%, rgba(74, 163, 171, 0.55) 55%, transparent 75%);
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 111, 120, 0.3);
+  opacity: 0;
+  will-change: transform;
+}
+
+.cursor-ring.is-active { opacity: 1; }
+
+#bubbleTrail {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
 @media (max-width: 700px) {
+  body { cursor: auto; }
+  .cursor-layer,
+  .page-glow { display: none; }
   .hero .body { grid-template-columns: 1fr; }
   .avatar { width: 96px; height: 96px; }
   .cols, .cards { grid-template-columns: 1fr; }
@@ -440,4 +513,10 @@ footer {
   dl.contact { grid-template-columns: 1fr; gap: 0.15rem; }
   dl.contact dd { margin-bottom: 0.65rem; }
   .body { padding: 1.15rem 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body { cursor: auto; }
+  .cursor-layer,
+  .page-glow { display: none; }
 }

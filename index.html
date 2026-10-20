@@ -12,6 +12,13 @@
 </head>
 <body>
 
+<div class="cursor-layer" aria-hidden="true">
+  <div class="cursor-bubble" id="cursorBubble"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <canvas id="bubbleTrail"></canvas>
+</div>
+<div class="page-glow" aria-hidden="true"></div>
+
 <header class="menubar">
   <div class="wrap">
     <strong>Shreya Kumari</strong>
@@ -59,8 +66,8 @@
       <p>I care about models that are useful outside the notebook: clear evaluation, reliable orchestration, and systems you can actually put next to real workflows.</p>
       <div class="stats">
         <div class="stat"><b>LLMs</b><span>language-model systems</span></div>
-        <div class="stat"><b>Agents</b><span>agentic AI workflows</span></div>
-        <div class="stat"><b>World</b><span>simulation &amp; world models</span></div>
+        <div class="stat"><b>Agentic AI</b><span>tool-using workflows</span></div>
+        <div class="stat"><b>World Models</b><span>simulation &amp; prediction</span></div>
         <div class="stat"><b>5</b><span>active paper submissions</span></div>
       </div>
     </div>
@@ -246,5 +253,6 @@
   <div class="wrap">© 2026 Shreya Kumari</div>
 </footer>
 
+<script src="assets/script.js"></script>
 </body>
 </html>
