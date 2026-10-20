@@ -74,9 +74,9 @@
   <section class="win reveal" id="about" aria-labelledby="about-title">
     <div class="titlebar"><span class="box"></span><h2 id="about-title">About</h2></div>
     <div class="body">
-      <p>I am a Research Engineer at <a href="https://medos.tech/" rel="noopener">MedOS Tech</a> in Abu Dhabi, working on AI for clinical decision support, medical research, and workflow automation. My work sits at the intersection of machine learning research and practical system building — especially <strong>LLMs</strong>, <strong>agentic AI</strong>, and <strong>world models</strong> for scientific and medical settings.</p>
-      <p>Before MedOS Tech I was an ML Intern at the Materials Informatics Lab, IIT Madras, on optimization-driven predictive modeling for materials science, and a Research Intern at DoMS, IIT Madras, on structured reasoning and applied ML systems. I am completing a B.S. in Data Science and Applications at IIT Madras.</p>
-      <p>I care about models that are useful outside the notebook: clear evaluation, reliable orchestration, and systems you can actually put next to real workflows.</p>
+      <p>I am an applied AI research engineer specializing in <strong>agentic LLM systems</strong>, <strong>RAG</strong>, tool-using agents, memory, and evaluation — currently a Research Engineer at <a href="https://medos.tech/" rel="noopener">MedOS Tech</a> in Abu Dhabi.</p>
+      <p>Previously I collaborated with <strong>MBZUAI</strong> (Prof. Imran Razzak) on clinical-trial <strong>World Models</strong>, interned at <strong>MI Lab, IIT Madras</strong> on <strong>TransChem</strong> and autonomous materials discovery, and built <strong>GuruSetu</strong> at <strong>CIFIL Lab, IIT Madras</strong>. I also collaborate with <strong>Zhiguang Cao (SMU)</strong> on world-model planning for combinatorial optimization.</p>
+      <p>I am completing a B.S. in Data Science and Applications at IIT Madras (CGPA 8.49/10).</p>
       <div class="stats">
         <div class="stat"><b>LLMs</b><span>language-model systems</span></div>
         <div class="stat"><b>Agentic AI</b><span>tool-using workflows</span></div>
@@ -93,11 +93,11 @@
         <div class="panel">
           <h3>Working on now</h3>
           <ul>
-            <li><strong>MedOS Tech:</strong> research engineering for clinical AI, medical research tooling, and workflow automation.</li>
-            <li><strong>LLM systems:</strong> retrieval, generation, and evaluation loops grounded in real tasks.</li>
-            <li><strong>Agentic AI:</strong> agents that plan, call tools, and operate inside constrained workflows.</li>
-            <li><strong>World models:</strong> simulation-driven predictive models for scientific and decision-support settings.</li>
-            <li><strong>Reliability:</strong> evaluation for systems that need to be trusted around people and data.</li>
+            <li><strong>CTA-RAG</strong> and agentic retrieval systems for high-stakes routing and validation.</li>
+            <li><strong>LLM memory</strong> infrastructure: consolidation, forgetting, prioritisation, and synthesis.</li>
+            <li><strong>World Models</strong> for clinical trials and combinatorial planning (LaRP / CVRP).</li>
+            <li><strong>Agent evaluation</strong> harnesses (SWE-bench Verified) for architecture and failure modes.</li>
+            <li><strong>TransChem</strong> and autonomous discovery workflows for scientific ML.</li>
           </ul>
         </div>
         <div class="panel">
@@ -122,35 +122,46 @@
           <h3>Research Engineer <span class="badge">current</span></h3>
           <div class="org">MedOS Tech · Abu Dhabi, UAE</div>
           <ul>
-            <li>Building AI for <strong>clinical decision support</strong>, medical research, and workflow automation.</li>
-            <li>Working across <strong>LLMs</strong>, <strong>World Models</strong>, research tooling, and production pipelines next to clinical reality.</li>
+            <li>Built <strong>CTA-RAG</strong>, an agentic CTI system with task-aware retrieval and routing (<strong>99.78%</strong> routing accuracy on <strong>4,560</strong> benchmark items).</li>
+            <li>Designed an <strong>LLM memory</strong> / knowledge-operations layer; improved retrieval <strong>0.55→0.99</strong> while cutting stored memories <strong>9×</strong>.</li>
+            <li>Built an instrumented <strong>SWE-bench Verified</strong> agent harness for architecture and failure-mode evaluation.</li>
           </ul>
         </li>
         <li>
-          <div class="when">2026 &ndash; Present</div>
+          <div class="when">Mar 2026 &ndash; Jun 2026</div>
           <h3>Research Collaborator</h3>
-          <div class="org">AI4Opt Group · Singapore Management University (SMU) · with Prof. Zhiguang Cao</div>
+          <div class="org">MBZUAI · Guide: Prof. Imran Razzak</div>
           <ul>
-            <li>Research collaboration on <strong>AI for Optimization</strong>, including <strong>LLMs</strong> and <strong>World Models</strong> for decision-making systems.</li>
-            <li>Contributing to applied research spanning <strong>structured reasoning</strong>, <strong>agents</strong>, and evaluation for complex workflows.</li>
+            <li>Built an evidence-driven clinical-trial <strong>World Model</strong> (OpenFDA, PubMed, DrugBank) with ~3.6k/1.2k train/eval transitions.</li>
+            <li>Developed an <strong>LLM rule compiler</strong> extracting <strong>30+</strong> typed simulator parameters from drug labels and literature.</li>
+            <li>Held-out evaluation vs <strong>4 baselines</strong> with <strong>50+</strong> automated tests for calibrated treatment-response simulation.</li>
           </ul>
         </li>
         <li>
           <div class="when">Jan 2026 &ndash; Jul 2026</div>
           <h3>ML Intern</h3>
-          <div class="org">Materials Informatics Lab, IIT Madras</div>
+          <div class="org">MI Lab, IIT Madras</div>
           <ul>
-            <li>Built and evaluated <strong>TransChem</strong> for optimization-driven ML and predictive modeling in materials science.</li>
-            <li>Bridging data-driven models with experiment-guided design of advanced materials.</li>
+            <li><strong>TransChem</strong> (Shell plc): molecular representations + MLP for ionic-liquid Td prediction; <strong>R² = 0.85</strong> (vs 0.81 classical baseline).</li>
+            <li><strong>Archemist</strong> (Cooper Group): autonomous materials discovery; cut fabrication time from ~40h to <strong>6–8h</strong> per experiment.</li>
           </ul>
         </li>
         <li>
           <div class="when">Jul 2025 &ndash; Dec 2025</div>
           <h3>Research Intern</h3>
-          <div class="org">DoMS, IIT Madras · Chennai, India</div>
+          <div class="org">CIFIL Lab, IIT Madras</div>
           <ul>
-            <li>Research on <strong>structured reasoning</strong> and applied <strong>machine learning</strong> systems.</li>
-            <li>Combined academic research practice with end-to-end <strong>system building</strong>.</li>
+            <li>Built and deployed <strong>GuruSetu</strong> (<a href="https://gurusetu.iitm.ac.in" rel="noopener">gurusetu.iitm.ac.in</a>) — full-stack system with database, backend APIs, and React frontend.</li>
+            <li>Automated IPO prospectus extraction and analysis across ~<strong>1,500</strong> documents for large-scale financial insights.</li>
+          </ul>
+        </li>
+        <li>
+          <div class="when">Jun 2025</div>
+          <h3>Quant Developer</h3>
+          <div class="org">QuantHive · IIT Madras Research Park</div>
+          <ul>
+            <li>Built a modular <strong>event-driven backtesting engine</strong> with market, signal, order, and fill events.</li>
+            <li>GPU kernels (CUDA / Numba / CuPy) for <strong>15×</strong> speedup on <strong>1M+</strong> datapoints.</li>
           </ul>
         </li>
       </ol>
@@ -162,39 +173,39 @@
     <div class="body">
       <div class="cards">
         <article class="card">
-          <h3>Clinical World Models</h3>
-          <p>World-model systems for clinical decision support at MedOS Tech — simulating patient/state dynamics to support prediction, planning, and evaluable bedside tooling.</p>
+          <h3>Clinical Trial World Model</h3>
+          <p>Evidence-driven world model using OpenFDA, PubMed, and DrugBank for treatment-response simulation — built during MBZUAI collaboration (Prof. Imran Razzak).</p>
           <ul class="tags small">
             <li>World Models</li>
             <li>Clinical AI</li>
-            <li>MedOS Tech</li>
+            <li>MBZUAI</li>
           </ul>
         </article>
-        <a class="card" href="https://github.com/shreyakumari0301/Event-Driven-Backtesting-Engine" rel="noopener">
-          <h3>Event-Driven Backtesting Engine</h3>
-          <p>Modular engine for simulating trading strategies with event-driven architecture and reproducible evaluation loops.</p>
+        <article class="card">
+          <h3>LaRP · Lookahead Rollout Planning for CVRP</h3>
+          <p>Value/Q <strong>World Model</strong> + exact CVRP simulator with top-K planning; collaborated with <strong>Zhiguang Cao, SMU</strong>. Extended MnLP with inference-time rollout planning.</p>
           <ul class="tags small">
-            <li>Python</li>
-            <li>Simulation</li>
-            <li>Systems</li>
+            <li>World Models</li>
+            <li>PyTorch</li>
+            <li>SMU</li>
+          </ul>
+        </article>
+        <a class="card" href="https://gurusetu.iitm.ac.in" rel="noopener">
+          <h3>GuruSetu</h3>
+          <p>Full-stack platform at CIFIL Lab, IIT Madras — database, backend APIs, and React frontend, with large-scale IPO prospectus extraction (~1,500 docs).</p>
+          <ul class="tags small">
+            <li>Full-stack</li>
+            <li>IIT Madras</li>
+            <li>Finance NLP</li>
           </ul>
         </a>
-        <a class="card" href="https://github.com/shreyakumari0301/Brain-Tumor-Detection" rel="noopener">
-          <h3>Brain Tumor Detection</h3>
-          <p>Deep learning pipeline for medical imaging — detecting and classifying brain tumors from scan data.</p>
-          <ul class="tags small">
-            <li>Medical AI</li>
-            <li>Deep Learning</li>
-            <li>CV</li>
-          </ul>
-        </a>
-        <a class="card" href="https://github.com/shreyakumari0301/AI-Chatbot-using-FastAPI" rel="noopener">
-          <h3>AI Chatbot · FastAPI</h3>
-          <p>Production-minded conversational agent with a FastAPI backend — clean APIs for LLM-powered interaction.</p>
+        <a class="card" href="https://github.com/shreyakumari0301/LLM-Council" rel="noopener">
+          <h3>Cross-Model Reasoning · LLM Council</h3>
+          <p>3-model generate–critique–synthesize council (Groq, Ollama, Mistral) with agreement scoring and confidence-aware fallback.</p>
           <ul class="tags small">
             <li>LLMs</li>
-            <li>FastAPI</li>
-            <li>Agents</li>
+            <li>Multi-agent</li>
+            <li>Evaluation</li>
           </ul>
         </a>
       </div>
@@ -257,23 +268,24 @@
           <h3 class="group" style="margin-top:0">AI &amp; research</h3>
           <ul class="tags">
             <li>LLMs</li>
-            <li>Agentic AI</li>
-            <li>World Models</li>
-            <li>Deep Learning</li>
-            <li>Scientific AI</li>
-            <li>Evaluation</li>
             <li>RAG</li>
+            <li>Multi-Agent Systems</li>
+            <li>World Models</li>
+            <li>PyTorch</li>
+            <li>Transformers</li>
+            <li>Evaluation</li>
           </ul>
         </div>
         <div>
           <h3 class="group" style="margin-top:0">Engineering</h3>
           <ul class="tags">
             <li>Python</li>
-            <li>PyTorch</li>
             <li>FastAPI</li>
-            <li>Data Science</li>
-            <li>System Design</li>
-            <li>Research Pipelines</li>
+            <li>React</li>
+            <li>PostgreSQL</li>
+            <li>FAISS</li>
+            <li>CUDA</li>
+            <li>Docker</li>
           </ul>
         </div>
       </div>
@@ -286,7 +298,7 @@
       <div class="cols">
         <div class="panel">
           <h3>Education</h3>
-          <p><strong>B.S. in Data Science &amp; Applications</strong><br>Indian Institute of Technology Madras<br>2023 – 2027</p>
+          <p><strong>B.S. in Data Science &amp; Applications</strong><br>Indian Institute of Technology Madras<br>2023 – Sept 2026 · CGPA 8.49/10</p>
         </div>
         <div class="panel">
           <h3>Profiles</h3>
