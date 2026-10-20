@@ -84,8 +84,8 @@
     ringX += (mouseX - ringX) * 0.12;
     ringY += (mouseY - ringY) * 0.12;
 
-    bubble.style.transform = `translate3d(${bubbleX}px, ${bubbleY}px, 0)`;
-    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+    bubble.style.transform = `translate3d(${bubbleX}px, ${bubbleY}px, 0) rotate(45deg)`;
+    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0) rotate(45deg)`;
 
     if (glow) {
       glow.style.left = `${mouseX}px`;
@@ -102,14 +102,15 @@
         particles.splice(i, 1);
         continue;
       }
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(34, 184, 207, ${0.35 * p.life})`;
-      ctx.arc(p.x, p.y, p.r * p.life, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = `rgba(255, 255, 255, ${0.45 * p.life})`;
-      ctx.arc(p.x - p.r * 0.2, p.y - p.r * 0.2, Math.max(p.r * 0.35, 1), 0, Math.PI * 2);
-      ctx.fill();
+      const size = p.r * p.life;
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(Math.PI / 4);
+      ctx.fillStyle = `rgba(34, 184, 207, ${0.32 * p.life})`;
+      ctx.fillRect(-size / 2, -size / 2, size, size);
+      ctx.fillStyle = `rgba(255, 255, 255, ${0.4 * p.life})`;
+      ctx.fillRect(-size / 5, -size / 5, size / 2.5, size / 2.5);
+      ctx.restore();
     }
 
     requestAnimationFrame(tick);
