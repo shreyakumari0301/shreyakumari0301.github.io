@@ -21,7 +21,7 @@
   --radius: 16px;
   --font: "IBM Plex Sans", "Segoe UI", "Noto Sans SC", sans-serif;
   --mono: "IBM Plex Mono", "Consolas", monospace;
-  --max: 1100px;
+  --max: 1320px;
 }
 
 [data-theme="dark"] {
@@ -57,8 +57,8 @@ body {
   font-family: var(--font);
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.65;
-  font-size: 18px;
+  line-height: 1.7;
+  font-size: 20px;
   cursor: none;
   overflow-x: hidden;
 }
@@ -227,10 +227,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .work-intro {
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.55rem;
+  line-height: 1.75;
   color: var(--muted);
-  max-width: 58rem;
+  max-width: none;
 }
 
 .work-intro a,
@@ -328,8 +328,12 @@ main {
   background: var(--titlebar-bg);
 }
 
-.body { padding: 1.4rem 1.45rem 1.55rem; }
+.body { padding: 1.75rem 1.85rem 2.25rem; }
 .body p + p { margin-top: 0.85rem; }
+#skills .body {
+  padding-top: 1.85rem;
+  padding-bottom: 3.5rem;
+}
 
 .hero .body {
   display: grid;
@@ -494,8 +498,8 @@ h1 {
 
 .tags li {
   font-family: var(--mono);
-  font-size: 0.78rem;
-  padding: 0.28rem 0.65rem;
+  font-size: 0.92rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--chip);
@@ -532,7 +536,7 @@ h1 {
 }
 
 .panel ul { margin-left: 1.05rem; }
-.panel li { margin-bottom: 0.45rem; font-size: 1.02rem; }
+.panel li { margin-bottom: 0.45rem; font-size: 1.5rem; }
 
 .timeline {
   list-style: none;
@@ -563,28 +567,29 @@ h1 {
 
 .when {
   font-family: var(--mono);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   color: var(--accent);
   font-weight: 600;
 }
 
 .timeline h3 {
-  font-size: 1.18rem;
+  font-size: 1.7rem;
   margin-top: 0.15rem;
 }
 
 .org {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: 1.4rem;
 }
 
 .timeline ul {
   margin: 0.55rem 0 0 1.05rem;
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 1.5rem;
+  line-height: 1.65;
 }
 
-.timeline ul li { margin-bottom: 0.3rem; }
+.timeline ul li { margin-bottom: 0.45rem; }
 
 .badge {
   font-family: var(--mono);
@@ -602,14 +607,19 @@ h1 {
 
 .group {
   font-family: var(--mono);
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  margin: 0 0 0.75rem;
-  padding-bottom: 0.4rem;
+  margin: 0 0 0.85rem;
+  padding-bottom: 0.45rem;
   border-bottom: 1px solid var(--line);
   color: var(--muted);
 }
+
+#skills .group { margin-top: 1.5rem; }
+#skills .group:first-child,
+#skills .cols > div > .group:first-child { margin-top: 0; }
+#skills .tags { margin-bottom: 0.35rem; }
 
 .cards {
   display: grid;
@@ -638,8 +648,8 @@ a.card:hover {
 }
 
 .card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.45rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.35;
@@ -647,8 +657,9 @@ a.card:hover {
 }
 
 .card p {
-  font-size: 0.98rem;
+  font-size: 1.15rem;
   color: var(--muted);
+  line-height: 1.6;
 }
 
 .reveal {
