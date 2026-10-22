@@ -127,9 +127,9 @@
         "<strong>B.S. in Data Science &amp; Applications</strong><br>Indian Institute of Technology Madras<br>2023 – Sept 2026 · CGPA <strong>8.49/10</strong>",
       "edu.refs": "Referees",
       "edu.ref1":
-        '<strong>Prof. Rohit Batra</strong> — IIT Madras / WSAI<br><a href="mailto:rbatra@smail.iitm.ac.in">rbatra@smail.iitm.ac.in</a>',
+        '<strong>Abhijit Das</strong> — CTO, MedOS Tech<br><a href="mailto:abhijit.das@mbzuai.ac.ae">abhijit.das@mbzuai.ac.ae</a>',
       "edu.ref2":
-        '<strong>Prof. ThenMozhi M</strong> — DoMS, IIT Madras<br><a href="mailto:mtm@iitm.ac.in">mtm@iitm.ac.in</a>',
+        '<strong>Prof. Rohit Batra</strong> — IIT Madras / WSAI<br><a href="mailto:rbatra@smail.iitm.ac.in">rbatra@smail.iitm.ac.in</a>',
       "skills.llm": "LLM & agents",
       "skills.ml": "ML / AI",
       "skills.sys": "Systems",
@@ -263,9 +263,9 @@
         "<strong>数据科学与应用学士</strong><br>印度理工学院马德拉斯分校<br>2023 – 2026年9月 · GPA <strong>8.49/10</strong>",
       "edu.refs": "推荐人",
       "edu.ref1":
-        '<strong>Rohit Batra 教授</strong> — 印度理工学院马德拉斯分校 / WSAI<br><a href="mailto:rbatra@smail.iitm.ac.in">rbatra@smail.iitm.ac.in</a>',
+        '<strong>Abhijit Das</strong> — CTO，MedOS Tech<br><a href="mailto:abhijit.das@mbzuai.ac.ae">abhijit.das@mbzuai.ac.ae</a>',
       "edu.ref2":
-        '<strong>ThenMozhi M 教授</strong> — 印度理工学院马德拉斯分校管理学院<br><a href="mailto:mtm@iitm.ac.in">mtm@iitm.ac.in</a>',
+        '<strong>Rohit Batra 教授</strong> — 印度理工学院马德拉斯分校 / WSAI<br><a href="mailto:rbatra@smail.iitm.ac.in">rbatra@smail.iitm.ac.in</a>',
       "skills.llm": "大模型与智能体",
       "skills.ml": "机器学习 / AI",
       "skills.sys": "系统",
