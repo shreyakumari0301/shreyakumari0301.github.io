@@ -1,6 +1,5 @@
 (() => {
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const isCoarse = window.matchMedia("(pointer: coarse)").matches;
 
   const reveals = document.querySelectorAll(".reveal");
   if (reduceMotion) {
@@ -22,7 +21,7 @@
     reveals.forEach((el) => el.classList.add("is-in"));
   }
 
-  if (reduceMotion || isCoarse) return;
+  if (reduceMotion) return;
 
   const bubble = document.getElementById("cursorBubble");
   const ring = document.getElementById("cursorRing");
@@ -66,9 +65,9 @@
     if (particles.length > 42) particles.shift();
   }
 
-  function onMove(event) {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
+  function onPointer(x, y) {
+    mouseX = x;
+    mouseY = y;
     if (!active) {
       active = true;
       bubble.classList.add("is-active");
@@ -78,7 +77,17 @@
       ringX = mouseX;
       ringY = mouseY;
     }
-    if (Math.random() > 0.55) spawnParticle(mouseX, mouseY);
+    if (Math.random() > 0.45) spawnParticle(mouseX, mouseY);
+  }
+
+  function onMove(event) {
+    onPointer(event.clientX, event.clientY);
+  }
+
+  function onTouch(event) {
+    if (!event.touches || !event.touches.length) return;
+    const touch = event.touches[0];
+    onPointer(touch.clientX, touch.clientY);
   }
 
   function onLeave() {
@@ -131,8 +140,12 @@
 
   resize();
   window.addEventListener("resize", resize);
-  window.addEventListener("mousemove", onMove);
+  window.addEventListener("mousemove", onMove, { passive: true });
   window.addEventListener("mouseover", updateHoverTarget);
   document.addEventListener("mouseleave", onLeave);
+  window.addEventListener("touchstart", onTouch, { passive: true });
+  window.addEventListener("touchmove", onTouch, { passive: true });
+  window.addEventListener("touchend", onLeave);
+  window.addEventListener("touchcancel", onLeave);
   requestAnimationFrame(tick);
 })();

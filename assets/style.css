@@ -633,11 +633,18 @@ footer {
 }
 
 @media (max-width: 700px) {
-  body { cursor: auto; }
-  .cursor-layer,
-  .page-glow { display: none; }
   .hero .body { grid-template-columns: 1fr; gap: 1.25rem; }
   .avatar { width: 160px; height: 200px; }
+  .cursor-bubble {
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0 -14px;
+  }
+  .cursor-bubble.is-hover {
+    width: 48px;
+    height: 48px;
+    margin: -24px 0 0 -24px;
+  }
   .cols, .cards { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   dl.contact { grid-template-columns: 1fr; gap: 0.15rem; }

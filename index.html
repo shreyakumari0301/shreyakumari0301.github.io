@@ -76,7 +76,7 @@
     <div class="titlebar"><span class="box"></span><h2 id="about-title">About</h2></div>
     <div class="body">
       <p>I am an applied AI research engineer specializing in <strong>agentic LLM systems</strong>, <strong>RAG</strong>, tool-using agents, memory, and evaluation. Currently a Research Engineer at <a href="https://medos.tech/" rel="noopener">MedOS Tech</a> (Abu Dhabi).</p>
-      <p>Prior work spans research collaborations with <strong>Imran Razzak (MBZUAI)</strong> on clinical-trial World Models and <strong>Zhiguang Cao (SMU)</strong> on world-model planning for CVRP, plus <strong>MI Lab, IIT Madras</strong> (TransChem + Archemist) and <strong>CIFIL Lab</strong> (<a href="https://gurusetu.iitm.ac.in" rel="noopener">GuruSetu</a>).</p>
+      <p>Prior work spans research collaborations with <strong>Imran Razzak (MBZUAI)</strong> on clinical-trial World Models and <strong>Zhiguang Cao (SMU)</strong> on FAROS world-model planning for dynamic vehicle routing, plus <strong>MI Lab, IIT Madras</strong> (TransChem + Archemist) and <strong>CIFIL Lab</strong> (<a href="https://gurusetu.iitm.ac.in" rel="noopener">GuruSetu</a>).</p>
       <div class="stats">
         <div class="stat"><b>LLMs &amp; RAG</b><span>routing, memory, agents</span></div>
         <div class="stat"><b>World Models</b><span>clinical + combinatorial</span></div>
@@ -105,9 +105,9 @@
           <h3>Research Collaborator</h3>
           <div class="org">with Zhiguang Cao · Singapore Management University (SMU)</div>
           <ul>
-            <li>Building <strong>LaRP</strong> (Lookahead Rollout Planning) for capacitated VRP — value/Q <strong>World Model</strong> + exact CVRP simulator with top-K planning.</li>
-            <li>Extended MnLP with inference-time rollout planning; reproduced paper baseline of <strong>3.206%</strong> gap to LKH on <strong>CVRP200</strong>.</li>
-            <li>Trained ranking-focused world models with pairwise hinge loss and early-stopping on rollout gap.</li>
+            <li>Developing <strong>FAROS</strong>, a world-model planner for dynamic routing that imagines future customer requests to score routing and waiting actions.</li>
+            <li>Built a deadline-constrained dynamic <strong>CVRP200</strong> benchmark with scenario evaluation and strong waiting/oracle baselines.</li>
+            <li>Cut travel distance by <strong>21%</strong> vs nearest dispatch (<strong>20.1 vs 25.5</strong>) while meeting deadlines on all <strong>40</strong> test days.</li>
           </ul>
         </li>
         <li>
@@ -213,11 +213,11 @@
           </ul>
         </article>
         <article class="card">
-          <h3>LaRP · Lookahead Rollout Planning for CVRP</h3>
-          <p>Value/Q <strong>World Model</strong> + exact CVRP simulator with top-K planning; collaborated with <strong>Zhiguang Cao, SMU</strong>.</p>
+          <h3>FAROS · World-Model Planning for Dynamic Vehicle Routing</h3>
+          <p>Generative world model of future requests for dynamic CVRP; <strong>21%</strong> shorter travel vs nearest dispatch. With <strong>Zhiguang Cao, SMU</strong>.</p>
           <ul class="tags small">
             <li>World Models</li>
-            <li>PyTorch</li>
+            <li>Dynamic VRP</li>
             <li>SMU</li>
           </ul>
         </article>
