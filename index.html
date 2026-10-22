@@ -29,17 +29,23 @@
 <header class="menubar">
   <div class="wrap">
     <strong>Shreya Kumari</strong>
-    <nav aria-label="Primary">
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="menubar-right">
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#education" data-i18n="nav.education">Education</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -52,17 +58,17 @@
         <img src="pic.png" alt="Shreya Kumari" width="220" height="280">
       </figure>
       <div>
-        <div class="eyebrow">Research Engineer · MedOS Tech · Abu Dhabi</div>
+        <div class="eyebrow" data-i18n="hero.eyebrow">Research Engineer · MedOS Tech · Abu Dhabi</div>
         <h1>Shreya Kumari</h1>
-        <p class="lead">Agentic LLMs, RAG, memory systems, and World Models — based in Chennai, India.</p>
+        <p class="lead" data-i18n="hero.lead">Research Engineer in Machine Learning at MedOS Tech</p>
         <ul class="proofs" aria-label="Highlights">
-          <li>MedOS Tech · Research Engineer</li>
-          <li>IIT Madras · B.S. Data Science</li>
-          <li>5 papers under review</li>
-          <li>Chennai, India</li>
+          <li data-i18n="hero.chip1">MedOS Tech · Research Engineer</li>
+          <li data-i18n="hero.chip2">IIT Madras · B.S. Data Science</li>
+          <li data-i18n="hero.chip3">5 papers under review</li>
+          <li data-i18n="hero.chip4">Chennai, India</li>
         </ul>
         <div class="btns">
-          <a class="btn primary" href="#experience">Experience</a>
+          <a class="btn primary" href="#experience" data-i18n="hero.cta">Experience</a>
           <a class="btn" href="https://github.com/shreyakumari0301" rel="noopener">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/shreyakumari0301" rel="noopener">LinkedIn</a>
           <a class="btn" href="https://openreview.net/profile?id=~Shreya_Kumari1" rel="noopener">OpenReview</a>
@@ -73,21 +79,22 @@
   </section>
 
   <section class="win reveal" id="about" aria-labelledby="about-title">
-    <div class="titlebar"><span class="box"></span><h2 id="about-title">About</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="about-title" data-i18n="about.title">Work</h2></div>
     <div class="body">
-      <p>I am an applied AI research engineer specializing in <strong>agentic LLM systems</strong>, <strong>RAG</strong>, tool-using agents, memory, and evaluation. Currently a Research Engineer at <a href="https://medos.tech/" rel="noopener">MedOS Tech</a> (Abu Dhabi).</p>
-      <p>Prior work spans research collaborations with <strong>Imran Razzak (MBZUAI)</strong> on clinical-trial World Models and <strong>Zhiguang Cao (SMU)</strong> on FAROS world-model planning for dynamic vehicle routing, plus <strong>MI Lab, IIT Madras</strong> (TransChem + Archemist) and <strong>CIFIL Lab</strong> (<a href="https://gurusetu.iitm.ac.in" rel="noopener">GuruSetu</a>).</p>
+      <p class="work-intro" data-i18n-html="about.work">
+        Shreya is a Research Engineer at <a href="https://medos.tech/" rel="noopener">MedOS Tech</a> in Abu Dhabi, working on agentic LLM systems, RAG, memory, and evaluation. She collaborates with <strong>Prof. Imran Razzak</strong> at MBZUAI on clinical-trial <strong>World Models</strong>, and with <strong>Prof. Zhiguang Cao</strong> at SMU on <strong>FAROS</strong>, a <strong>World Model</strong> planner for dynamic vehicle routing. She also worked at MI Lab, IIT Madras on TransChem and Archemist (ROS-based robotic materials discovery), and built <a href="https://gurusetu.iitm.ac.in" rel="noopener">GuruSetu</a> at CIFIL Lab, IIT Madras. Her research has three threads: agentic retrieval and routing, LLM memory infrastructure, and World Models for science and planning. She is completing a B.S. in Data Science and Applications at IIT Madras.
+      </p>
       <div class="stats">
-        <div class="stat"><b>LLMs &amp; RAG</b><span>routing, memory, agents</span></div>
-        <div class="stat"><b>World Models</b><span>clinical + combinatorial</span></div>
-        <div class="stat"><b>Evaluation</b><span>SWE-bench &amp; harnesses</span></div>
-        <div class="stat"><b>5</b><span>active submissions</span></div>
+        <div class="stat"><b data-i18n="stat.1b">LLMs &amp; RAG</b><span data-i18n="stat.1s">routing, memory, agents</span></div>
+        <div class="stat"><b data-i18n="stat.2b">World Models</b><span data-i18n="stat.2s">clinical + combinatorial</span></div>
+        <div class="stat"><b data-i18n="stat.3b">Evaluation</b><span data-i18n="stat.3s">SWE-bench &amp; harnesses</span></div>
+        <div class="stat"><b data-i18n="stat.4b">5</b><span data-i18n="stat.4s">active submissions</span></div>
       </div>
     </div>
   </section>
 
   <section class="win sand reveal" id="experience" aria-labelledby="exp-title">
-    <div class="titlebar"><span class="box"></span><h2 id="exp-title">Experience</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="exp-title" data-i18n="sec.experience">Experience</h2></div>
     <div class="body">
       <ol class="timeline">
         <li>
@@ -152,7 +159,7 @@
   </section>
 
   <section class="win reveal" id="publications" aria-labelledby="pub-title">
-    <div class="titlebar"><span class="box"></span><h2 id="pub-title">Publications</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="pub-title" data-i18n="sec.publications">Publications</h2></div>
     <div class="body">
       <div class="cards">
         <article class="card">
@@ -200,7 +207,7 @@
   </section>
 
   <section class="win blue reveal" id="projects" aria-labelledby="proj-title">
-    <div class="titlebar"><span class="box"></span><h2 id="proj-title">Projects</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="proj-title" data-i18n="sec.projects">Projects</h2></div>
     <div class="body">
       <div class="cards">
         <article class="card">
@@ -253,7 +260,7 @@
   </section>
 
   <section class="win sand reveal" id="education" aria-labelledby="edu-title">
-    <div class="titlebar"><span class="box"></span><h2 id="edu-title">Education</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="edu-title" data-i18n="sec.education">Education</h2></div>
     <div class="body">
       <div class="cols">
         <div class="panel">
@@ -272,7 +279,7 @@
   </section>
 
   <section class="win blue reveal" id="skills" aria-labelledby="skills-title">
-    <div class="titlebar"><span class="box"></span><h2 id="skills-title">Skills</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="skills-title" data-i18n="sec.skills">Skills</h2></div>
     <div class="body">
       <div class="cols">
         <div>
@@ -322,9 +329,9 @@
   </section>
 
   <section class="win reveal" id="contact" aria-labelledby="contact-title">
-    <div class="titlebar"><span class="box"></span><h2 id="contact-title">Contact</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="contact-title" data-i18n="sec.contact">Contact</h2></div>
     <div class="body">
-      <p>Based in <strong>Chennai, India</strong> · open to research collaborations on medical AI, LLMs, agentic systems, and world models.</p>
+      <p data-i18n-html="contact.blurb">Based in <strong>Chennai, India</strong> · open to research collaborations on medical AI, LLMs, agentic systems, and world models.</p>
       <dl class="contact">
         <dt>Phone</dt>
         <dd><a href="https://wa.me/919566213052" rel="noopener">+91 9566213052</a></dd>
