@@ -202,20 +202,22 @@ main {
 
 .hero .body {
   display: grid;
-  grid-template-columns: 132px 1fr;
-  gap: 1.6rem;
-  align-items: center;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
 }
 
 .avatar {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 280px;
   margin: 0;
   border-radius: 20px;
   border: 1px solid var(--line);
   overflow: hidden;
   box-shadow: var(--shadow);
   flex-shrink: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .avatar img {
@@ -224,6 +226,12 @@ main {
   object-fit: cover;
   object-position: center top;
   display: block;
+}
+
+.hero .body > div {
+  min-width: 0;
+  position: relative;
+  z-index: 0;
 }
 
 .eyebrow {
@@ -628,8 +636,8 @@ footer {
   body { cursor: auto; }
   .cursor-layer,
   .page-glow { display: none; }
-  .hero .body { grid-template-columns: 1fr; }
-  .avatar { width: 140px; height: 140px; }
+  .hero .body { grid-template-columns: 1fr; gap: 1.25rem; }
+  .avatar { width: 160px; height: 200px; }
   .cols, .cards { grid-template-columns: 1fr; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   dl.contact { grid-template-columns: 1fr; gap: 0.15rem; }
