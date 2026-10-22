@@ -1,13 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shreya Kumari · Research Engineer, MedOS Tech</title>
 <meta name="description" content="Shreya Kumari, Research Engineer at MedOS Tech. Agentic LLMs, RAG, World Models. IIT Madras · Chennai, India.">
+<script>
+(() => {
+  try {
+    const t = localStorage.getItem("site-theme");
+    if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    else if (window.matchMedia("(prefers-color-scheme: dark)").matches) document.documentElement.setAttribute("data-theme", "dark");
+  } catch (_) {}
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -41,6 +50,10 @@
           <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
       </nav>
+      <button type="button" class="theme-btn" id="themeToggle" aria-label="Toggle theme" title="Light / Dark">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
       <div class="lang-toggle" role="group" aria-label="Language">
         <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
         <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中文</button>
@@ -52,7 +65,7 @@
 <main class="wrap">
 
   <section class="win hero reveal" aria-labelledby="top-title">
-    <div class="titlebar"><span class="box"></span><h2 id="top-title">Profile</h2></div>
+    <div class="titlebar"><span class="box"></span><h2 id="top-title" data-i18n="sec.profile">Profile</h2></div>
     <div class="body">
       <figure class="avatar">
         <img src="pic.png" alt="Shreya Kumari" width="220" height="280">
@@ -98,60 +111,60 @@
     <div class="body">
       <ol class="timeline">
         <li>
-          <div class="when">Jul 2026 &ndash; Present</div>
-          <h3>Research Engineer <span class="badge">current</span></h3>
-          <div class="org">MedOS Tech · Abu Dhabi, UAE</div>
+          <div class="when" data-i18n="exp.medos.when">Jul 2026 – Present</div>
+          <h3><span data-i18n="exp.medos.role">Research Engineer</span> <span class="badge" data-i18n="badge.current">current</span></h3>
+          <div class="org" data-i18n="exp.medos.org">MedOS Tech · Abu Dhabi, UAE</div>
           <ul>
-            <li>Built <strong>CTA-RAG</strong>, an agentic CTI system with task-aware retrieval and routing (<strong>99.78%</strong> routing accuracy on <strong>4,560</strong> benchmark items).</li>
-            <li>Designed an <strong>LLM memory</strong> / knowledge-operations layer; improved retrieval <strong>0.55→0.99</strong> while cutting stored memories <strong>9×</strong>.</li>
-            <li>Built an instrumented <strong>SWE-bench Verified</strong> agent harness for architecture and failure-mode evaluation.</li>
+            <li data-i18n-html="exp.medos.b1">Built <strong>CTA-RAG</strong>, an agentic CTI system with task-aware retrieval and routing (<strong>99.78%</strong> routing accuracy on <strong>4,560</strong> benchmark items).</li>
+            <li data-i18n-html="exp.medos.b2">Designed an <strong>LLM memory</strong> / knowledge-operations layer; improved retrieval <strong>0.55→0.99</strong> while cutting stored memories <strong>9×</strong>.</li>
+            <li data-i18n-html="exp.medos.b3">Built an instrumented <strong>SWE-bench Verified</strong> agent harness for architecture and failure-mode evaluation.</li>
           </ul>
         </li>
         <li>
-          <div class="when">2026 &ndash; Present</div>
-          <h3>Research Collaborator</h3>
-          <div class="org">with Zhiguang Cao · Singapore Management University (SMU)</div>
+          <div class="when" data-i18n="exp.cao.when">2026 – Present</div>
+          <h3 data-i18n="exp.cao.role">Research Collaborator</h3>
+          <div class="org" data-i18n="exp.cao.org">with Zhiguang Cao · Singapore Management University (SMU)</div>
           <ul>
-            <li>Developing <strong>FAROS</strong>, a <strong>World Model</strong> planner for dynamic routing that imagines future customer requests to score routing and waiting actions.</li>
-            <li>Built a deadline-constrained dynamic <strong>CVRP200</strong> benchmark with scenario evaluation and strong waiting/oracle baselines.</li>
-            <li>Cut travel distance by <strong>21%</strong> vs nearest dispatch (<strong>20.1 vs 25.5</strong>) while meeting deadlines on all <strong>40</strong> test days.</li>
+            <li data-i18n-html="exp.cao.b1">Developing <strong>FAROS</strong>, a <strong>World Model</strong> planner for dynamic routing that imagines future customer requests to score routing and waiting actions.</li>
+            <li data-i18n-html="exp.cao.b2">Built a deadline-constrained dynamic <strong>CVRP200</strong> benchmark with scenario evaluation and strong waiting/oracle baselines.</li>
+            <li data-i18n-html="exp.cao.b3">Cut travel distance by <strong>21%</strong> vs nearest dispatch (<strong>20.1 vs 25.5</strong>) while meeting deadlines on all <strong>40</strong> test days.</li>
           </ul>
         </li>
         <li>
-          <div class="when">Mar 2026 &ndash; Jun 2026</div>
-          <h3>Research Collaborator</h3>
-          <div class="org">with Imran Razzak · Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</div>
+          <div class="when" data-i18n="exp.mbzuai.when">Mar 2026 – Jun 2026</div>
+          <h3 data-i18n="exp.mbzuai.role">Research Collaborator</h3>
+          <div class="org" data-i18n="exp.mbzuai.org">with Imran Razzak · Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</div>
           <ul>
-            <li>Built an evidence-driven clinical-trial <strong>World Model</strong> (OpenFDA, PubMed, DrugBank) with ~3.6k/1.2k train/eval transitions.</li>
-            <li>Developed an <strong>LLM rule compiler</strong> extracting <strong>30+</strong> typed simulator parameters from drug labels and literature.</li>
-            <li>Held-out evaluation vs <strong>4 baselines</strong> with <strong>50+</strong> automated tests for calibrated treatment-response simulation.</li>
+            <li data-i18n-html="exp.mbzuai.b1">Built an evidence-driven clinical-trial <strong>World Model</strong> (OpenFDA, PubMed, DrugBank) with ~3.6k/1.2k train/eval transitions.</li>
+            <li data-i18n-html="exp.mbzuai.b2">Developed an <strong>LLM rule compiler</strong> extracting <strong>30+</strong> typed simulator parameters from drug labels and literature.</li>
+            <li data-i18n-html="exp.mbzuai.b3">Held-out evaluation vs <strong>4 baselines</strong> with <strong>50+</strong> automated tests for calibrated treatment-response simulation.</li>
           </ul>
         </li>
         <li>
-          <div class="when">Jan 2026 &ndash; Jul 2026</div>
-          <h3>ML Intern</h3>
-          <div class="org">MI Lab, IIT Madras</div>
+          <div class="when" data-i18n="exp.milab.when">Jan 2026 – Jul 2026</div>
+          <h3 data-i18n="exp.milab.role">ML Intern</h3>
+          <div class="org" data-i18n="exp.milab.org">MI Lab, IIT Madras</div>
           <ul>
-            <li><strong>TransChem</strong> (Shell plc): molecular representations + MLP for ionic-liquid Td prediction; <strong>R² = 0.85</strong> (vs 0.81 classical baseline).</li>
-            <li><strong>Archemist</strong> (Cooper Group): cut fabrication time from ~40h to <strong>6–8h</strong> per experiment through autonomous physical execution and scheduling.</li>
-            <li>Extended Archemist with lab stations and <strong>ROS</strong>-based robotic control for closed-loop, physical materials discovery.</li>
+            <li data-i18n-html="exp.milab.b1"><strong>TransChem</strong> (Shell plc): molecular representations + MLP for ionic-liquid Td prediction; <strong>R² = 0.85</strong> (vs 0.81 classical baseline).</li>
+            <li data-i18n-html="exp.milab.b2"><strong>Archemist</strong> (Cooper Group): cut fabrication time from ~40h to <strong>6–8h</strong> per experiment through autonomous physical execution and scheduling.</li>
+            <li data-i18n-html="exp.milab.b3">Extended Archemist with lab stations and <strong>ROS</strong>-based robotic control for closed-loop, physical materials discovery.</li>
           </ul>
         </li>
         <li>
-          <div class="when">Jul 2025 &ndash; Dec 2025</div>
-          <h3>Research Intern</h3>
-          <div class="org">CIFIL Lab, IIT Madras</div>
+          <div class="when" data-i18n="exp.cifil.when">Jul 2025 – Dec 2025</div>
+          <h3 data-i18n="exp.cifil.role">Research Intern</h3>
+          <div class="org" data-i18n="exp.cifil.org">CIFIL Lab, IIT Madras</div>
           <ul>
-            <li>Built and deployed <strong>GuruSetu</strong> (<a href="https://gurusetu.iitm.ac.in" rel="noopener">gurusetu.iitm.ac.in</a>) — full-stack system with database, backend APIs, and React frontend.</li>
+            <li data-i18n-html="exp.cifil.b1">Built and deployed <strong>GuruSetu</strong> (<a href="https://gurusetu.iitm.ac.in" rel="noopener">gurusetu.iitm.ac.in</a>) — full-stack system with database, backend APIs, and React frontend.</li>
           </ul>
         </li>
         <li>
-          <div class="when">Jun 2025</div>
-          <h3>Quant Developer</h3>
-          <div class="org">QuantHive · IIT Madras Research Park</div>
+          <div class="when" data-i18n="exp.quant.when">Jun 2025</div>
+          <h3 data-i18n="exp.quant.role">Quant Developer</h3>
+          <div class="org" data-i18n="exp.quant.org">QuantHive · IIT Madras Research Park</div>
           <ul>
-            <li>Built a modular <strong>event-driven backtesting engine</strong> with market, signal, order, and fill events.</li>
-            <li>GPU kernels (CUDA / Numba / CuPy) for <strong>15×</strong> speedup on <strong>1M+</strong> datapoints.</li>
+            <li data-i18n-html="exp.quant.b1">Built a modular <strong>event-driven backtesting engine</strong> with market, signal, order, and fill events.</li>
+            <li data-i18n-html="exp.quant.b2">GPU kernels (CUDA / Numba / CuPy) for <strong>15×</strong> speedup on <strong>1M+</strong> datapoints.</li>
           </ul>
         </li>
       </ol>
@@ -163,44 +176,29 @@
     <div class="body">
       <div class="cards">
         <article class="card">
-          <h3>An Operations Layer for LLM-Maintained Personal Knowledge Bases</h3>
-          <p><strong>Shreya Kumari</strong>, Habib Baluwala, Bandar AlShammari</p>
-          <ul class="tags small">
-            <li>ACL ARR 2026</li>
-            <li>13 Oct 2026</li>
-          </ul>
+          <h3 data-i18n="pub.1.t">An Operations Layer for LLM-Maintained Personal Knowledge Bases</h3>
+          <p data-i18n-html="pub.1.a"><strong>Shreya Kumari</strong>, Habib Baluwala, Bandar AlShammari</p>
+          <ul class="tags small"><li>ACL ARR 2026</li><li>13 Oct 2026</li></ul>
         </article>
         <article class="card">
-          <h3>SecondRead: Rereading Visual Evidence for Cheap Multi-Task Medical Vision-Language Generation</h3>
-          <p>Ashish Mehta, <strong>Shreya Kumari</strong>, Abhijit Das, Imran Razzak</p>
-          <ul class="tags small">
-            <li>ACL ARR 2026</li>
-            <li>11 Oct 2026</li>
-          </ul>
+          <h3 data-i18n="pub.2.t">SecondRead: Rereading Visual Evidence for Cheap Multi-Task Medical Vision-Language Generation</h3>
+          <p data-i18n-html="pub.2.a">Ashish Mehta, <strong>Shreya Kumari</strong>, Abhijit Das, Imran Razzak</p>
+          <ul class="tags small"><li>ACL ARR 2026</li><li>11 Oct 2026</li></ul>
         </article>
         <article class="card">
-          <h3>GEM: Graph-Based Evolutionary Metacognition for Self-Improving Language Agents</h3>
-          <p>Abhijit Das, Ashish Mehta, Debasmita Biswas, <strong>Shreya Kumari</strong>, Nichula Sathmith Wasalathilaka, Behzad Bozorgtabar, Dwarikanath Mahapatra, Imran Razzak</p>
-          <ul class="tags small">
-            <li>AAMAS 2027</li>
-            <li>02 Oct 2026</li>
-          </ul>
+          <h3 data-i18n="pub.3.t">GEM: Graph-Based Evolutionary Metacognition for Self-Improving Language Agents</h3>
+          <p data-i18n-html="pub.3.a">Abhijit Das, Ashish Mehta, Debasmita Biswas, <strong>Shreya Kumari</strong>, Nichula Sathmith Wasalathilaka, Behzad Bozorgtabar, Dwarikanath Mahapatra, Imran Razzak</p>
+          <ul class="tags small"><li>AAMAS 2027</li><li>02 Oct 2026</li></ul>
         </article>
         <article class="card">
-          <h3>ViTA: Visual Tool Synthesis for Self-Evolving Agents</h3>
-          <p>Abhijit Das, Debasmita Biswas, <strong>Shreya Kumari</strong>, Nichula Sathmith Wasalathilaka, Dwarikanath Mahapatra, Imran Razzak</p>
-          <ul class="tags small">
-            <li>NeurIPS 2026</li>
-            <li>01 May 2026</li>
-          </ul>
+          <h3 data-i18n="pub.4.t">ViTA: Visual Tool Synthesis for Self-Evolving Agents</h3>
+          <p data-i18n-html="pub.4.a">Abhijit Das, Debasmita Biswas, <strong>Shreya Kumari</strong>, Nichula Sathmith Wasalathilaka, Dwarikanath Mahapatra, Imran Razzak</p>
+          <ul class="tags small"><li>NeurIPS 2026</li><li>01 May 2026</li></ul>
         </article>
         <article class="card">
-          <h3>Route Before You Retrieve: Contract-Bound, Cognitive-Task-Aware RAG for Cyber Threat Intelligence</h3>
-          <p>Muna Al-Hawawreh; <strong>Shreya Kumari</strong>; Muhammad Hammad; Ashish Mehta; Hirusha Adikari; Habib Baluwala; Bandar Alshammari</p>
-          <ul class="tags small">
-            <li>EAAI</li>
-            <li>EAAI-26-33481</li>
-          </ul>
+          <h3 data-i18n="pub.5.t">Route Before You Retrieve: Contract-Bound, Cognitive-Task-Aware RAG for Cyber Threat Intelligence</h3>
+          <p data-i18n-html="pub.5.a">Muna Al-Hawawreh; <strong>Shreya Kumari</strong>; Muhammad Hammad; Ashish Mehta; Hirusha Adikari; Habib Baluwala; Bandar Alshammari</p>
+          <ul class="tags small"><li>EAAI</li><li>EAAI-26-33481</li></ul>
         </article>
       </div>
     </div>
@@ -211,49 +209,29 @@
     <div class="body">
       <div class="cards">
         <article class="card">
-          <h3>Clinical Trial World Model</h3>
-          <p>Evidence-driven world model using OpenFDA, PubMed, and DrugBank for treatment-response simulation — MBZUAI collaboration (Prof. Imran Razzak).</p>
-          <ul class="tags small">
-            <li>World Models</li>
-            <li>Clinical AI</li>
-            <li>MBZUAI</li>
-          </ul>
+          <h3 data-i18n="proj.wm.t">Clinical Trial World Model</h3>
+          <p data-i18n-html="proj.wm.d">Evidence-driven world model using OpenFDA, PubMed, and DrugBank for treatment-response simulation — MBZUAI collaboration (Prof. Imran Razzak).</p>
+          <ul class="tags small"><li data-i18n="tag.wm">World Models</li><li data-i18n="tag.clinical">Clinical AI</li><li>MBZUAI</li></ul>
         </article>
         <article class="card">
-          <h3>FAROS · World-Model Planning for Dynamic Vehicle Routing</h3>
-          <p>Generative <strong>World Model</strong> of future requests for dynamic CVRP; <strong>21%</strong> shorter travel vs nearest dispatch. With <strong>Zhiguang Cao, SMU</strong>.</p>
-          <ul class="tags small">
-            <li>World Models</li>
-            <li>Dynamic VRP</li>
-            <li>SMU</li>
-          </ul>
+          <h3 data-i18n="proj.faros.t">FAROS · World-Model Planning for Dynamic Vehicle Routing</h3>
+          <p data-i18n-html="proj.faros.d">Generative <strong>World Model</strong> of future requests for dynamic CVRP; <strong>21%</strong> shorter travel vs nearest dispatch. With <strong>Zhiguang Cao, SMU</strong>.</p>
+          <ul class="tags small"><li data-i18n="tag.wm">World Models</li><li data-i18n="tag.dvrp">Dynamic VRP</li><li>SMU</li></ul>
         </article>
         <a class="card" href="https://gurusetu.iitm.ac.in" rel="noopener">
-          <h3>GuruSetu</h3>
-          <p>Full-stack platform at CIFIL Lab, IIT Madras — database, backend APIs, and React frontend.</p>
-          <ul class="tags small">
-            <li>Full-stack</li>
-            <li>IIT Madras</li>
-            <li>React</li>
-          </ul>
+          <h3 data-i18n="proj.guru.t">GuruSetu</h3>
+          <p data-i18n="proj.guru.d">Full-stack platform at CIFIL Lab, IIT Madras — database, backend APIs, and React frontend.</p>
+          <ul class="tags small"><li data-i18n="tag.fullstack">Full-stack</li><li>IIT Madras</li><li>React</li></ul>
         </a>
         <a class="card" href="https://github.com/shreyakumari0301/LLM-Council" rel="noopener">
-          <h3>Cross-Model Reasoning · LLM Council</h3>
-          <p>3-model generate–critique–synthesize council (Groq, Ollama, Mistral) with agreement scoring and confidence-aware fallback.</p>
-          <ul class="tags small">
-            <li>LLMs</li>
-            <li>Multi-agent</li>
-            <li>Evaluation</li>
-          </ul>
+          <h3 data-i18n="proj.council.t">Cross-Model Reasoning · LLM Council</h3>
+          <p data-i18n="proj.council.d">3-model generate–critique–synthesize council (Groq, Ollama, Mistral) with agreement scoring and confidence-aware fallback.</p>
+          <ul class="tags small"><li>LLMs</li><li data-i18n="tag.multiagent">Multi-agent</li><li data-i18n="tag.eval">Evaluation</li></ul>
         </a>
         <a class="card" href="https://github.com/shreyakumari0301/Event-Driven-Backtesting-Engine" rel="noopener">
-          <h3>Event-Driven Backtesting Engine</h3>
-          <p>Modular Python engine with market/signal/order/fill events; CUDA/Numba/CuPy kernels for <strong>15×</strong> speedup on 1M+ points.</p>
-          <ul class="tags small">
-            <li>Python</li>
-            <li>CUDA</li>
-            <li>Quant</li>
-          </ul>
+          <h3 data-i18n="proj.bt.t">Event-Driven Backtesting Engine</h3>
+          <p data-i18n-html="proj.bt.d">Modular Python engine with market/signal/order/fill events; CUDA/Numba/CuPy kernels for <strong>15×</strong> speedup on 1M+ points.</p>
+          <ul class="tags small"><li>Python</li><li>CUDA</li><li data-i18n="tag.quant">Quant</li></ul>
         </a>
       </div>
     </div>
@@ -264,15 +242,13 @@
     <div class="body">
       <div class="cols">
         <div class="panel">
-          <h3>Degree</h3>
-          <p><strong>B.S. in Data Science &amp; Applications</strong><br>Indian Institute of Technology Madras<br>2023 – Sept 2026 · CGPA <strong>8.49/10</strong></p>
+          <h3 data-i18n="edu.degree">Degree</h3>
+          <p data-i18n-html="edu.detail"><strong>B.S. in Data Science &amp; Applications</strong><br>Indian Institute of Technology Madras<br>2023 – Sept 2026 · CGPA <strong>8.49/10</strong></p>
         </div>
         <div class="panel">
-          <h3>Referees</h3>
-          <p><strong>Prof. Rohit Batra</strong> — IIT Madras / WSAI<br>
-          <a href="mailto:rbatra@smail.iitm.ac.in">rbatra@smail.iitm.ac.in</a></p>
-          <p style="margin-top:0.75rem"><strong>Prof. ThenMozhi M</strong> — DoMS, IIT Madras<br>
-          <a href="mailto:mtm@iitm.ac.in">mtm@iitm.ac.in</a></p>
+          <h3 data-i18n="edu.refs">Referees</h3>
+          <p data-i18n-html="edu.ref1"><strong>Prof. Rohit Batra</strong> — IIT Madras / WSAI<br><a href="mailto:rbatra@smail.iitm.ac.in">rbatra@smail.iitm.ac.in</a></p>
+          <p style="margin-top:0.75rem" data-i18n-html="edu.ref2"><strong>Prof. ThenMozhi M</strong> — DoMS, IIT Madras<br><a href="mailto:mtm@iitm.ac.in">mtm@iitm.ac.in</a></p>
         </div>
       </div>
     </div>
@@ -283,45 +259,29 @@
     <div class="body">
       <div class="cols">
         <div>
-          <h3 class="group" style="margin-top:0">LLM &amp; agents</h3>
+          <h3 class="group" style="margin-top:0" data-i18n="skills.llm">LLM &amp; agents</h3>
           <ul class="tags">
             <li>RAG</li>
-            <li>Multi-Agent Systems</li>
-            <li>Tool Calling</li>
-            <li>World Models</li>
+            <li data-i18n="tag.multiagent">Multi-Agent Systems</li>
+            <li data-i18n="tag.tool">Tool Calling</li>
+            <li data-i18n="tag.wm">World Models</li>
             <li>LangChain</li>
-            <li>Evaluation</li>
+            <li data-i18n="tag.eval">Evaluation</li>
           </ul>
-          <h3 class="group">ML / AI</h3>
+          <h3 class="group" data-i18n="skills.ml">ML / AI</h3>
           <ul class="tags">
-            <li>PyTorch</li>
-            <li>Transformers</li>
-            <li>HuggingFace</li>
-            <li>Scikit-learn</li>
-            <li>CUDA</li>
-            <li>Numba</li>
+            <li>PyTorch</li><li>Transformers</li><li>HuggingFace</li><li>Scikit-learn</li><li>CUDA</li><li>Numba</li>
           </ul>
         </div>
         <div>
-          <h3 class="group" style="margin-top:0">Systems</h3>
+          <h3 class="group" style="margin-top:0" data-i18n="skills.sys">Systems</h3>
           <ul class="tags">
-            <li>Python</li>
-            <li>FastAPI</li>
-            <li>React</li>
-            <li>PostgreSQL</li>
-            <li>FAISS</li>
-            <li>ChromaDB</li>
-            <li>Docker</li>
-            <li>ROS</li>
+            <li>Python</li><li>FastAPI</li><li>React</li><li>PostgreSQL</li><li>FAISS</li><li>ChromaDB</li><li>Docker</li><li>ROS</li>
           </ul>
-          <h3 class="group">Languages</h3>
+          <h3 class="group" data-i18n="skills.lang">Languages</h3>
           <ul class="tags">
-            <li>Python</li>
-            <li>C</li>
-            <li>Java</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>English (fluent)</li>
+            <li>Python</li><li>C</li><li>Java</li><li>JavaScript</li><li>TypeScript</li>
+            <li data-i18n="tag.english">English (fluent)</li>
           </ul>
         </div>
       </div>
@@ -333,9 +293,9 @@
     <div class="body">
       <p data-i18n-html="contact.blurb">Based in <strong>Chennai, India</strong> · open to research collaborations on medical AI, LLMs, agentic systems, and world models.</p>
       <dl class="contact">
-        <dt>Phone</dt>
+        <dt data-i18n="contact.phone">Phone</dt>
         <dd><a href="https://wa.me/919566213052" rel="noopener">+91 9566213052</a></dd>
-        <dt>Email</dt>
+        <dt data-i18n="contact.email">Email</dt>
         <dd><a href="mailto:shreyasri0301@gmail.com">shreyasri0301@gmail.com</a><br>
             <a href="mailto:23f2003785@ds.study.iitm.ac.in">23f2003785@ds.study.iitm.ac.in</a></dd>
         <dt>GitHub</dt>
@@ -356,6 +316,7 @@
   <div class="wrap">© 2026 Shreya Kumari</div>
 </footer>
 
+<script src="assets/i18n.js"></script>
 <script src="assets/script.js"></script>
 </body>
 </html>
