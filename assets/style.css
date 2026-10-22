@@ -57,8 +57,8 @@ body {
   font-family: var(--font);
   color: var(--ink);
   background: var(--bg);
-  line-height: 1.7;
-  font-size: 20px;
+  line-height: 1.65;
+  font-size: 18px;
   cursor: none;
   overflow-x: hidden;
 }
@@ -159,8 +159,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .theme-btn {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--surface);
@@ -180,18 +180,19 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   height: 18px;
 }
 
-/* Dark mode → yellow sun (switch to light). Light mode → moon. */
+/* Dark mode: black sun on yellow paper. Light mode: moon. */
 .theme-btn .icon-moon { display: none; }
-.theme-btn .icon-sun { display: block; color: #f5c518; }
+.theme-btn .icon-sun { display: block; color: #111; }
 [data-theme="light"] .theme-btn .icon-sun { display: none; }
 [data-theme="light"] .theme-btn .icon-moon { display: block; color: var(--ink); }
 [data-theme="dark"] .theme-btn {
-  border-color: rgba(245, 197, 24, 0.35);
-  background: rgba(245, 197, 24, 0.08);
+  background: #f5c518;
+  border-color: #e0b000;
+  color: #111;
 }
 [data-theme="dark"] .theme-btn:hover {
+  background: #ffd54a;
   border-color: #f5c518;
-  background: rgba(245, 197, 24, 0.16);
 }
 
 .lang-toggle {
@@ -208,10 +209,10 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   background: transparent;
   color: var(--muted);
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  padding: 0.35rem 0.7rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 999px;
   cursor: pointer;
   line-height: 1;
@@ -227,8 +228,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .work-intro {
-  font-size: 1.55rem;
-  line-height: 1.75;
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: var(--muted);
   max-width: none;
 }
@@ -244,7 +245,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 
 .menubar strong {
-  font-size: 1.05rem;
+  font-size: 1.55rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -259,9 +260,9 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 .menubar a {
   display: block;
-  padding: 0.4rem 0.7rem;
+  padding: 0.45rem 0.75rem;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   font-weight: 500;
   border-radius: 8px;
   text-decoration: none;
@@ -536,7 +537,7 @@ h1 {
 }
 
 .panel ul { margin-left: 1.05rem; }
-.panel li { margin-bottom: 0.45rem; font-size: 1.5rem; }
+.panel li { margin-bottom: 0.45rem; font-size: 1.02rem; }
 
 .timeline {
   list-style: none;
@@ -567,29 +568,28 @@ h1 {
 
 .when {
   font-family: var(--mono);
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   color: var(--accent);
   font-weight: 600;
 }
 
 .timeline h3 {
-  font-size: 1.7rem;
+  font-size: 1.18rem;
   margin-top: 0.15rem;
 }
 
 .org {
   color: var(--muted);
-  font-size: 1.4rem;
+  font-size: 1rem;
 }
 
 .timeline ul {
   margin: 0.55rem 0 0 1.05rem;
   color: var(--muted);
-  font-size: 1.5rem;
-  line-height: 1.65;
+  font-size: 1.02rem;
 }
 
-.timeline ul li { margin-bottom: 0.45rem; }
+.timeline ul li { margin-bottom: 0.3rem; }
 
 .badge {
   font-family: var(--mono);
@@ -648,8 +648,8 @@ a.card:hover {
 }
 
 .card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.45rem;
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.35;
@@ -657,9 +657,8 @@ a.card:hover {
 }
 
 .card p {
-  font-size: 1.15rem;
+  font-size: 0.98rem;
   color: var(--muted);
-  line-height: 1.6;
 }
 
 .reveal {
