@@ -326,10 +326,8 @@
       return null;
     }
   })();
-  if (savedTheme === "dark" || savedTheme === "light") applyTheme(savedTheme);
-  else if (!document.documentElement.getAttribute("data-theme")) {
-    applyTheme(window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  }
+  if (savedTheme === "light") applyTheme("light");
+  else applyTheme("dark");
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
