@@ -84,7 +84,7 @@
       "exp.quant.b2":
         "GPU kernels (CUDA / Numba / CuPy) for <strong>15×</strong> speedup on <strong>1M+</strong> datapoints.",
       "pub.1.t": "An Operations Layer for LLM-Maintained Personal Knowledge Bases",
-      "pub.1.a": "<strong>Shreya Kumari</strong>, Habib Baluwala, Bandar AlShammari",
+      "pub.1.a": "Habib Baluwala, <strong>Shreya Kumari</strong>, Bandar AlShammari",
       "pub.2.t":
         "SecondRead: Rereading Visual Evidence for Cheap Multi-Task Medical Vision-Language Generation",
       "pub.2.a": "Ashish Mehta, <strong>Shreya Kumari</strong>, Abhijit Das, Imran Razzak",
@@ -97,7 +97,7 @@
       "pub.5.t":
         "Route Before You Retrieve: Contract-Bound, Cognitive-Task-Aware RAG for Cyber Threat Intelligence",
       "pub.5.a":
-        "Muna Al-Hawawreh; <strong>Shreya Kumari</strong>; Muhammad Hammad; Ashish Mehta; Hirusha Adikari; Habib Baluwala; Bandar Alshammari",
+        "<strong>Shreya Kumari</strong>; Muna Al-Hawawreh (corresponding); Muhammad Hammad; Ashish Mehta; Hirusha Adikari; Habib Baluwala; Bandar Alshammari",
       "proj.wm.t": "Clinical Trial World Model",
       "proj.wm.d":
         "Evidence-driven world model using OpenFDA, PubMed, and DrugBank for treatment-response simulation — MBZUAI collaboration (Prof. Imran Razzak).",
@@ -222,7 +222,7 @@
       "exp.quant.b2":
         "使用 CUDA / Numba / CuPy GPU 内核，在 <strong>100 万+</strong> 数据点上实现 <strong>15×</strong> 加速。",
       "pub.1.t": "面向大语言模型维护的个人知识库运维层",
-      "pub.1.a": "<strong>Shreya Kumari</strong>、Habib Baluwala、Bandar AlShammari",
+      "pub.1.a": "Habib Baluwala、<strong>Shreya Kumari</strong>、Bandar AlShammari",
       "pub.2.t": "SecondRead：通过重读视觉证据实现低成本多任务医学视觉语言生成",
       "pub.2.a": "Ashish Mehta、<strong>Shreya Kumari</strong>、Abhijit Das、Imran Razzak",
       "pub.3.t": "GEM：面向自我改进语言智能体的图演化元认知",
@@ -233,7 +233,7 @@
         "Abhijit Das、Debasmita Biswas、<strong>Shreya Kumari</strong>、Nichula Sathmith Wasalathilaka、Dwarikanath Mahapatra、Imran Razzak",
       "pub.5.t": "先路由再检索：面向网络威胁情报的契约约束与认知任务感知 RAG",
       "pub.5.a":
-        "Muna Al-Hawawreh；<strong>Shreya Kumari</strong>；Muhammad Hammad；Ashish Mehta；Hirusha Adikari；Habib Baluwala；Bandar Alshammari",
+        "<strong>Shreya Kumari</strong>；Muna Al-Hawawreh（通讯作者）；Muhammad Hammad；Ashish Mehta；Hirusha Adikari；Habib Baluwala；Bandar Alshammari",
       "proj.wm.t": "临床试验世界模型",
       "proj.wm.d":
         "基于 OpenFDA、PubMed 与 DrugBank 的证据驱动世界模型，用于治疗响应仿真——与 MBZUAI（Imran Razzak 教授）合作。",
