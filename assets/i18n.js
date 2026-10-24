@@ -97,7 +97,7 @@
       "pub.5.t":
         "Route Before You Retrieve: Contract-Bound, Cognitive-Task-Aware RAG for Cyber Threat Intelligence",
       "pub.5.a":
-        "<strong>Shreya Kumari</strong>; Muna Al-Hawawreh (corresponding); Muhammad Hammad; Ashish Mehta; Hirusha Adikari; Habib Baluwala; Bandar Alshammari",
+        "<strong>Shreya Kumari</strong>, Muna Al-Hawawreh (corresponding), Muhammad Hammad, Ashish Mehta, Hirusha Adikari, Habib Baluwala, Bandar Alshammari",
       "proj.wm.t": "Clinical Trial World Model",
       "proj.wm.d":
         "Evidence-driven world model using OpenFDA, PubMed, and DrugBank for treatment-response simulation — MBZUAI collaboration (Prof. Imran Razzak).",
@@ -233,7 +233,7 @@
         "Abhijit Das、Debasmita Biswas、<strong>Shreya Kumari</strong>、Nichula Sathmith Wasalathilaka、Dwarikanath Mahapatra、Imran Razzak",
       "pub.5.t": "先路由再检索：面向网络威胁情报的契约约束与认知任务感知 RAG",
       "pub.5.a":
-        "<strong>Shreya Kumari</strong>；Muna Al-Hawawreh（通讯作者）；Muhammad Hammad；Ashish Mehta；Hirusha Adikari；Habib Baluwala；Bandar Alshammari",
+        "<strong>Shreya Kumari</strong>、Muna Al-Hawawreh（通讯作者）、Muhammad Hammad、Ashish Mehta、Hirusha Adikari、Habib Baluwala、Bandar Alshammari",
       "proj.wm.t": "临床试验世界模型",
       "proj.wm.d":
         "基于 OpenFDA、PubMed 与 DrugBank 的证据驱动世界模型，用于治疗响应仿真——与 MBZUAI（Imran Razzak 教授）合作。",
